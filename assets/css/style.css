@@ -1,0 +1,9 @@
+*{
+    margin-top: 5px;
+}
+body{
+    background-color: lightgrey;
+}
+.PTZ, .row{
+    border: 1px black solid;
+}

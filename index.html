@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="assets/javascript/app.js"></script>
+  <!-- CSS -->
+  <style>
+    .PTZ {
+      display: none;
+    }
+
+    .Dew {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+
+      <!-- Name of tester -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Name of tester
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control NameOfTester" placeholder="Name of tester">
+        </div>
+      </div>
+
+      <!-- CV Version -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">CV Version
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control CvVersion" placeholder="CV Version">
+        </div>
+      </div>
+
+      <!-- Machaine Specs -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Machaine Specs
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control MSpaces" placeholder="Machaine Specs">
+        </div>
+      </div>
+
+      <!-- Drivers -->
+      <div class="addDriver">
+        <div class="row">
+          <div class="col-2">
+            <label for="exampleInputPassword1">Driver(s)
+          </div>
+          <div class="col-4">
+            <input type="text" class="form-control drive-1" placeholder="Driver">
+          </div>
+          <div class="col-2">
+            <button type="button " class="btn btn-light plusDriver">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manfacture -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Manfacture
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control manfu" placeholder="Manfacture">
+        </div>
+      </div>
+
+      <!-- Model -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Model
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control model" placeholder="Model">
+        </div>
+      </div>
+
+         <!-- Camera's IP -->
+         <div class="row">
+          <div class="col-2">
+            <label for="exampleInputPassword1">Camera's IP
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip1" maxlength="3" placeholder="xxx">
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip2" maxlength="3" placeholder="xxx">
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip3" maxlength="3" placeholder="xxx">
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip4" maxlength="3" placeholder="xxx">
+          </div>
+        </div>
+
+      <!-- Mac address -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Mac address
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac1" maxlength="2" placeholder="xx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac2" maxlength="2" placeholder="xx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac3" maxlength="2" placeholder="xx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac4" maxlength="2" placeholder="xx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control mac5" maxlength="2" placeholder="xx">
+        </div>
+
+      </div>
+
+      <!-- Type -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Device Type
+        </div>
+        <div class="col-4">
+          <div class="col-2">
+            <select class="ui search dropdown deviceType">
+              <option value="">Device type list </option>
+
+            </select>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Protocols -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Protocols
+        </div>
+        <div class="col-4">
+          <!-- TCP -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline1">
+            <label class="form-check-label tcp" for="materialInline1 ">TCP</label>
+          </div>
+
+          <!-- UDP -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline2">
+            <label class="form-check-label udp" for="materialInline2">UDP</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supported Stream Types -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Supported Stream Types
+        </div>
+        <div class="col-4">
+          <!-- H264 Material inline -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline1">
+            <label class="form-check-label H264" for="materialInline1">H264</label>
+          </div>
+
+          <!-- MJPEG -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline2">
+            <label class="form-check-label MJPEG" for="materialInline2">MJPEG</label>
+          </div>
+          <!-- MPEG4 -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline2">
+            <label class="form-check-label MPEG4" for="materialInline2">MPEG4</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Non Supported Stream Types -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Non Supported Stream Types
+        </div>
+        <div class="col-4">
+
+          <input type="text" class="form-control" placeholder="Non Supported Stream Types">
+        </div>
+      </div>
+
+      <!-- Streams ID/CH -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Streams ID/CH
+        </div>
+        <div class="col-8">
+          <!-- CH -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input chBox" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control idInput"
+            maxlength="2" placeholder="CH">
+          </div>
+          <!-- ID -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input idBox" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control idInput"
+            maxlength="2" placeholder="ID">
+          </div>
+        </div>
+      </div>
+
+   
+
+      <!-- UserName/passwords -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">UserName/passwords
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control uName" placeholder="UserName">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control pWord" placeholder="Password">
+        </div>
+      </div>
+
+      <!-- FW V/Updated -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">FW V/Updated
+        </div>
+
+        <div class="col-4">
+
+          <input type="text" class="form-control" placeholder="FW">
+        </div>
+        <div class="col-1">
+          <label class="radio-inline yFWu"><input type="radio" name="optradioF">Yes</label>
+
+
+        </div>
+        <div class="col-1">
+          <label class="radio-inline nFWu"><input type="radio" name="optradioF">No</label>
+        </div>
+
+
+
+      </div>
+
+      <!-- Audio -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Audio
+        </div>
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input nAudio" type="radio" name="gridRadios" value="option12">
+            <label class="form-check-label">
+              No Audio
+            </label>
+          </div>
+
+
+        </div>
+        <div class="col-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" value="option13">
+            <label class="form-check-label cvNotSupportAudio">
+              CV does not supported
+            </label>
+          </div>
+
+        </div>
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" value="option14">
+            <label class="form-check-label oneWayAudio">
+              One way
+            </label>
+          </div>
+
+
+        </div>
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" value="option1">
+            <label class="form-check-label twoWayAudio">
+              Two way
+            </label>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PTZ -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">PTZ Capable
+        </div>
+        <div class="col-1">
+          <label class="radio-inline PtzYes"><input type="radio" name="optradioP">Yes</label>
+
+
+        </div>
+        <div class="col-1">
+          <label class="radio-inline PtzNo"><input type="radio" name="optradioP">No</label>
+        </div>
+
+      </div>
+
+      <div class="PTZ">
+
+        <!-- PTZ Driver Used -->
+        <div class="row">
+
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">PTZ Driver Used
+          </div>
+          <div class="col-2">
+            <select class="ui search dropdown PtzList">
+              <option value="">PTZ Drivers list </option>
+
+            </select>
+
+
+
+          </div>
+
+        </div>
+
+        <!-- PTZ ID Used -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">PTZ ID Used
+          </div>
+          <div class="col-2">
+            <input type="text" class="form-control ptzId" placeholder="ID">
+          </div>
+
+        </div>
+
+        <!-- Arrow Buttons -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Arrow Buttons
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input arrowP" type="radio" name="gridRadiosAB" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input arrowF" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
+              <label class="form-check-label arrowNS">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Zoom In/Out Buttons -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Zoom In/Out Buttons
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input zoomP" type="radio" name="gridRadiosIO" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input zoomF" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input zoomNS" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Iris Buttons -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Iris Buttons
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input irisP" type="radio" name="gridRadiosIB" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input irisF" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input irisNS" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Focus Buttons  -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Focus Buttons
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input foucsP" type="radio" name="gridRadios" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input foucsF" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input focusNS" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Auto Iris  -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Auto Iris
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input aIrisP" type="radio" name="gridRadiosAI" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input aIrisF" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input aIrisNS" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Auto Focus -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Auto Focus
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input aFocusP" type="radio" name="gridRadiosAF" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- PTZ Speed Adjust -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">PTZ Speed Adjust
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input ptzSppedP" type="radio" name="gridRadiosPSA" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input ptzSppedF" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input ptzSppedNS" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Preset Position Set -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Preset Position Set
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input presetSetP" type="radio" name="gridRadiosPP" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input presetSetF" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input presetSetNS" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Preset Position Show -->
+        <div class="row">
+          <div class="col-1">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-1">
+            <label for="exampleInputPassword1">Preset Position Show
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input presetShowP" type="radio" name="gridRadiosPPS" id="gridRadios" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                P
+              </label>
+            </div>
+
+
+          </div>
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input presetShowF" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
+              <label class="form-check-label" for="gridRadios1">
+                F
+              </label>
+            </div>
+
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input presetShowNS" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
+              <label class="form-check-label">
+                Not supported
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Dewarping -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Dewarping
+        </div>
+        <div class="col-1">
+          <label class="radio-inline DewYes"><input type="radio" name="optradioD">Yes</label>
+
+
+        </div>
+        <div class="col-1">
+          <label class="radio-inline DewNo"><input type="radio" name="optradioD">No</label>
+        </div>
+      </div>
+      <!-- Dewarping Driver Used -->
+      <div class="Dew">
+
+        <div class="row ">
+          <div class="col-1">
+
+          </div>
+          <div class="col-3">
+            <label for="exampleInputPassword1">Dewarping Driver
+          </div>
+          <div class="col-4">
+            <select class="ui search dropdown DewarpingT">
+              <option value="">Drivers list </option>
+
+            </select>
+          </div>
+          
+          <div class="col-2">
+            <select class="ui search dropdown DewarpingP">
+              <option value="">None</option>
+
+            </select>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Analytic -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Analytic
+        </div>
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input  analyticP" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              Yes
+            </label>
+          </div>
+
+
+        </div>
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input anaylyticF" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              No
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary submitB" >Submit</button>
+      <!-- onclick="window.print()" -->
+    </form>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
+
+  <!-- JS  Jquery-->
+  <script type="text/javascript">
+    // PTZ Drivers array
+    let PtzDrivers = [`AD Pelco P`, `AD ASCII Continuous `, `AD ASCII Make/Break`, `Philips Biphase`, `Canon VC-C4`, `Ultrak KD6 (Diamond)`, `Kalatel`, `Panasonic WV-CS850 Conv`, `Panasonic WV-CS850 New`, `Pelco ASCII`, `Pelco D`, `Pelco P`,
+      `RVision`, `SAE`, `Sensormatic`, `Sony`, `VCL`, `Vicon`, `Vicon Extended`, `ACTi Pelco-P IP`, `ACTi HTTP IP`, `ACTi Pelco-D IP`, `AD Illustra IP`, `AD IP`, `Axis V2 IP`, `Axis V2 IP (Firmware 4.40)`, `Bosch BiCom IP`, `Bosch OSRD IP`, `Bosch Pelco-D IP`,
+      `Brickcom IP`, `Canon IP`, `Cisco IP (v.1.0)`, `Digital`, `Generic-D IP`, `Hikvision Speed Dome IP`, `Mobotix IP`, `Panasonic IP`, `Pelco IP`, `Pelco API`, `Samsung IP`, `Sentry360 IP`, `Sony IP-Continuous Move`, `Sony IP-Move`, `Sony VISCA IP`, `Speco IP`, `Symmetry ENVS IP`,
+      `Symmetry IP`, `Toshiba IK-WB21A IP`, `Toshiba IK-WB IP`, `Vivotek IP`, `Nexus(DLTV) IP`, `Nexus(IR) IP`, `FLIR IP`, `Dahua IP`, `Samsung`, `VMS Remote PTZ`, `Samsung IP (v2)`];
+    //  Dewarping drivers
+    let lensType = [`Acti`, `Axis`, `Bosch`, `HikVision`, `ImmerVision`, `Oncam`, `Samsung`, `Sentry 360`, `Standard`, `Vivotek`];
+    let lensProfile = [`A0`, `A1`, `A8`, `B0`, `B4`, `B5`, `B6`, `B7`, `B8`, `B9`, `C1`, `C3`, `C4`, `C7`, `C8`, `C9`];
+
+    // Device type
+    let deviceType = ["180° IP Camera","270° IP Camera","360° IP Camera","Analog","Audio Bridge","Body camera","Bullet","Control Board","Cube","Dome","Doorstation / Intercom","DVR","Encoder","Fisheye","Fixed IP Camera","Flex lens camera","Hybrid Camera Receiver","Intercom","IP Horn Speaker","Multiple sensors","NVR","Panoramic IP Camera","PTZ IP Camera","Radar","Spy Camera","Thermal Bullet Camera","Thermal PTZ","Turrent IP Camera","Zoom IP Camera"]
+
+
+    let i = 1;
+    console.log(i);
+
+    $(".plusDriver").on("click", function (e) {
+      e.preventDefault();
+      $(".btnRemove").hide();
+      $(".addDriver").append(`<div class="row" id="con-${i}"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control  drive-${i + 1}" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove" id="btnRemove${i}">X</button></div></div>`);
+      $("#list1").append(`<li><a href="#" id=${i + 1}>${i + 1}</a></li>`)
+      i++;
+
+    });
+
+    // deleting driver extra txet box
+    $('body').on('click', '.btnRemove', function () {
+      $(this).parent().parent().remove();
+      $(`#btnRemove${i - 2}`).show();
+      $(`#${i}`).remove();
+      i--;
+
+    });
+
+    // Detect the chane  // input ==>>//
+    $("#myTextBox").bind("change paste keyup select  propertychange", function () {
+      alert($(this).val().trim());
+    });
+
+    //Display PTZ
+    $(".PtzYes").on("click", () => {
+      $(".PTZ").css("display", "block");
+    });
+    $(".PtzNo").on("click", () => {
+      $(".PTZ").css("display", "none");
+    });
+
+    //PTZ driver list
+    PtzDrivers.forEach((dType) => {
+      $(".PtzList").append(`<option value="${dType}">${dType}</option>`)
+
+
+    });
+
+    //Device type list
+    deviceType.forEach((ptzD) => {
+      $(".deviceType").append(`<option value="${ptzD}">${ptzD}</option>`)
+
+
+    });
+
+    // Dewarping driver list
+    lensType.forEach((lensT) => {
+      $(".DewarpingT").append(`<option value="${lensT}">${lensT}</option>`)
+    });
+    lensProfile.forEach((lensT) => {
+      $(".DewarpingP").append(`<option value="${lensT}">${lensT}</option>`)
+    });
+    //Dewarping PTZ
+    $(".DewYes").on("click", () => {
+      $(".Dew").css("display", "inline-block");
+    });
+    $(".DewNo").on("click", () => {
+      $(".Dew").css("display", "none");
+    });
+// E6 JS
+//     $(".PTZ1").on('click',  (e) =>{
+
+// $(".PtzBL").text(e.target.innerText);
+// console.log(e.target)
+
+// })
+
+//Submit button
+$(".submitB").on("click", (e) => {
+  e.preventDefault();
+console.log(`
+                    Salient Systems camera certification sheet
+ Name of tester: ${$(".NameOfTester").val().trim()}
+ Copleteview Version:
+
+ Driver(s) used:
+ Manfucture:
+ Model:
+
+ Camera's IP: 
+ Mac address: 
+
+ Device Type:
+ Protocols:
+ Supported Stream Types:
+ Non Supported Stream Types:
+ Streams ID/CH:
+ UserName/passwords:
+ FW V/Updated:
+
+ Audio:
+ PTZ Capable:
+ Dewarping:
+ Analytic:
+
+`)
+
+});
+
+
+// added focus function
+$('.mac1').on('input', function(event) {
+    let mac1 = event.currentTarget.value;
+    console.log(mac1);
+    if( mac1.length === 2){
+      $(".mac2").focus()
+    }
+});
+
+
+// PDF
+$(".submitB").on("click", () => {
+  var doc = new jsPDF()
+
+doc.text('Hello world!', 10, 10)
+doc.save('a4.pdf')
+})
+
+  </script>
+</body>
+
+</html>
