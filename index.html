@@ -973,10 +973,46 @@ console.log(`
 
 // added focus function
 $('.mac1').on('input', function(event) {
-    let mac1 = event.currentTarget.value;
-    console.log(mac1);
-    if( mac1.length === 2){
+    let mac = event.currentTarget.value;
+    if( mac.length === 2){
       $(".mac2").focus()
+    }
+});
+$('.mac2').on('input', function(event) {
+    let mac = event.currentTarget.value;
+    if( mac.length === 2){
+      $(".mac3").focus()
+    }
+});
+$('.mac3').on('input', function(event) {
+    let mac = event.currentTarget.value;
+    if( mac.length === 2){
+      $(".mac4").focus()
+    }
+});
+$('.mac4').on('input', function(event) {
+    let mac = event.currentTarget.value;
+    if( mac.length === 2){
+      $(".mac5").focus()
+    }
+});
+
+$('.ip1').on('input', function(event) {
+    let ip = event.currentTarget.value;
+    if( ip.length === 3){
+      $(".ip2").focus()
+    }
+});
+$('.ip2').on('input', function(event) {
+    let ip = event.currentTarget.value;
+    if( ip.length === 3){
+      $(".ip3").focus()
+    }
+});
+$('.ip3').on('input', function(event) {
+    let ip = event.currentTarget.value;
+    if( ip.length === 3){
+      $(".ip4").focus()
     }
 });
 
