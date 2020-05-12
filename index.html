@@ -246,7 +246,7 @@
             </div>
               <!-- URL/Driver -->
               <div class="col-6">
-                <input type="text" class="form-control urlMGPEGCheck"  disabled="disabled" placeholder="URL/Driver">
+                <input type="text" class="form-control urlMJPEGCheck"  disabled="disabled" placeholder="URL/Driver">
               </div>
           </div>
           <!-- MPEG-4 Material inline -->
@@ -1075,6 +1075,36 @@
                 $(".urlH264Check").focus();
             } else {
                 $(".urlH264Check").attr("disabled", "disabled");
+
+            }
+        });
+
+        $(".H265Check").click(function () {
+            if ($(this).is(":checked")) {
+                $(".urlH265Check").removeAttr("disabled");
+                $(".urlH265Check").focus();
+            } else {
+                $(".urlH265Check").attr("disabled", "disabled");
+
+            }
+        });
+
+        $(".MJPEGCheck").click(function () {
+            if ($(this).is(":checked")) {
+                $(".urlMJPEGCheck").removeAttr("disabled");
+                $(".urlMJPEGCheck").focus();
+            } else {
+                $(".urlMJPEGCheck").attr("disabled", "disabled");
+
+            }
+        });
+
+        $(".MPEG4Check").click(function () {
+            if ($(this).is(":checked")) {
+                $(".urlMPEG4Check").removeAttr("disabled");
+                $(".urlMPEG4Check").focus();
+            } else {
+                $(".urlMPEG4Check").attr("disabled", "disabled");
 
             }
         });
