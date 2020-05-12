@@ -100,24 +100,24 @@
         </div>
       </div>
 
-         <!-- Camera's IP -->
-         <div class="row">
-          <div class="col-2">
-            <label for="exampleInputPassword1">Camera's IP
-          </div>
-          <div class="col-1">
-            <input type="text" class="form-control ip1" maxlength="3" placeholder="xxx">
-          </div>
-          <div class="col-1">
-            <input type="text" class="form-control ip2" maxlength="3" placeholder="xxx">
-          </div>
-          <div class="col-1">
-            <input type="text" class="form-control ip3" maxlength="3" placeholder="xxx">
-          </div>
-          <div class="col-1">
-            <input type="text" class="form-control ip4" maxlength="3" placeholder="xxx">
-          </div>
+      <!-- Camera's IP -->
+      <div class="row">
+        <div class="col-2">
+          <label for="exampleInputPassword1">Camera's IP
         </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip1" maxlength="3" placeholder="xxx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip2" maxlength="3" placeholder="xxx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip3" maxlength="3" placeholder="xxx">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control ip4" maxlength="3" placeholder="xxx">
+        </div>
+      </div>
 
       <!-- Mac address -->
       <div class="row">
@@ -147,114 +147,134 @@
         <div class="col-2">
           <label for="exampleInputPassword1">Device Type
         </div>
+        <div class="col-3" >
+          <select class="ui search dropdown deviceType deviceTypeCheck"  txtPassportNumber>
+            <option value="" >Device type list </option>
+          </select>
+        </div>
         <div class="col-4">
-          <div class="col-2">
-            <select class="ui search dropdown deviceType">
-              <option value="">Device type list </option>
-
-            </select>
-
-
-
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input check"  id="checkType" id="materialInline1">
+            <input type="text" class="form-control newTypeCheck"  disabled="disabled" placeholder="Add new Type">
           </div>
+
         </div>
       </div>
 
- 
-   
+
+
       <!-- Supported Stream Types -->
       <div class="row">
         <div class="col-2">
-          <label >Supported Stream Types</label>
+          <label>Supported Stream Types</label>
         </div>
-        <div class="col-8">
+        <div class="col-10">
           <!-- H264 Material inline -->
           <div class="row">
             <div class="col-2">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label H264" for="materialInline1">H264</label>
+                <input type="checkbox" class="form-check-input H264Check" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">H264</label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label tcp" for="materialInline1 ">TCP</label>
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
-    
+
               <!-- UDP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label udp" for="materialInline2">UDP</label>
+                <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
+            <!-- URL/Driver -->
+            <div class="col-6">
+              <input type="text" class="form-control urlH264Check"  disabled="disabled" placeholder="URL/Driver">
+            </div>
           </div>
+
           <!-- H265 Material inline -->
           <div class="row">
             <div class="col-2">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label H264" for="materialInline1">H265</label>
+                <input type="checkbox" class="form-check-input H265Check" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">H265</label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label tcp" for="materialInline1 ">TCP</label>
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
-    
+
               <!-- UDP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label udp" for="materialInline2">UDP</label>
+                <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
+              <!-- URL/Driver -->
+              <div class="col-6">
+                <input type="text" class="form-control urlH265Check"  disabled="disabled" placeholder="URL/Driver">
+              </div>
           </div>
+
           <!-- MJPEG Material inline -->
           <div class="row">
             <div class="col-2">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label H264" for="materialInline1">MJPEG</label>
+                <input type="checkbox" class="form-check-input MJPEGCheck" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">MJPEG</label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label tcp" for="materialInline1 ">TCP</label>
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
-    
+
               <!-- UDP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label udp" for="materialInline2">UDP</label>
+                <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
+              <!-- URL/Driver -->
+              <div class="col-6">
+                <input type="text" class="form-control urlMGPEGCheck"  disabled="disabled" placeholder="URL/Driver">
+              </div>
           </div>
           <!-- MPEG-4 Material inline -->
           <div class="row">
             <div class="col-2">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label H264" for="materialInline1">MPEG4</label>
+                <input type="checkbox" class="form-check-input MPEG4Check" id="materialInline1">
+                <label class="form-check-label " for="materialInline1">MPEG4</label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label tcp" for="materialInline1 ">TCP</label>
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
-    
+
               <!-- UDP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label udp" for="materialInline2">UDP</label>
+                <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
+              <!-- URL/Driver -->
+              <div class="col-6">
+                <input type="text" class="form-control urlMPEG4Check"  disabled="disabled" placeholder="URL/Driver">
+              </div>
+
           </div>
         </div>
       </div>
@@ -279,19 +299,19 @@
           <!-- CH -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input chBox" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control idInput"
-            maxlength="2" placeholder="CH">
+            <label class="form-check-label" for="materialInline2">CH.</label><input type="text"
+              class="form-control idInput" maxlength="2" placeholder="CH">
           </div>
           <!-- ID -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input idBox" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control idInput"
-            maxlength="2" placeholder="ID">
+            <label class="form-check-label" for="materialInline2">ID.</label><input type="text"
+              class="form-control idInput" maxlength="2" placeholder="ID">
           </div>
         </div>
       </div>
 
-   
+
 
       <!-- UserName/passwords -->
       <div class="row">
@@ -667,7 +687,8 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input ptzSppedP" type="radio" name="gridRadiosPSA" id="gridRadios" value="option1">
+              <input class="form-check-input ptzSppedP" type="radio" name="gridRadiosPSA" id="gridRadios"
+                value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -677,7 +698,8 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input ptzSppedF" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
+              <input class="form-check-input ptzSppedF" type="radio" name="gridRadiosPSA" id="gridRadios1"
+                value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -686,7 +708,8 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input ptzSppedNS" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
+              <input class="form-check-input ptzSppedNS" type="radio" name="gridRadiosPSA" id="gridRadios1"
+                value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -706,7 +729,8 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input presetSetP" type="radio" name="gridRadiosPP" id="gridRadios" value="option1">
+              <input class="form-check-input presetSetP" type="radio" name="gridRadiosPP" id="gridRadios"
+                value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -716,7 +740,8 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input presetSetF" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
+              <input class="form-check-input presetSetF" type="radio" name="gridRadiosPP" id="gridRadios1"
+                value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -725,7 +750,8 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input presetSetNS" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
+              <input class="form-check-input presetSetNS" type="radio" name="gridRadiosPP" id="gridRadios1"
+                value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -745,7 +771,8 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input presetShowP" type="radio" name="gridRadiosPPS" id="gridRadios" value="option1">
+              <input class="form-check-input presetShowP" type="radio" name="gridRadiosPPS" id="gridRadios"
+                value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -755,7 +782,8 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input presetShowF" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
+              <input class="form-check-input presetShowF" type="radio" name="gridRadiosPPS" id="gridRadios1"
+                value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -764,7 +792,8 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input presetShowNS" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
+              <input class="form-check-input presetShowNS" type="radio" name="gridRadiosPPS" id="gridRadios1"
+                value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -805,7 +834,7 @@
 
             </select>
           </div>
-          
+
           <div class="col-2">
             <select class="ui search dropdown DewarpingP">
               <option value="">None</option>
@@ -844,13 +873,15 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary submitB" >Submit</button>
+      <button type="submit" class="btn btn-primary submitB">Submit</button>
       <!-- onclick="window.print()" -->
     </form>
   </div>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+    integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+    crossorigin="anonymous"></script>
 
 
   <!-- JS  Jquery-->
@@ -865,7 +896,7 @@
     let lensProfile = [`A0`, `A1`, `A8`, `B0`, `B4`, `B5`, `B6`, `B7`, `B8`, `B9`, `C1`, `C3`, `C4`, `C7`, `C8`, `C9`];
 
     // Device type
-    let deviceType = ["180° IP Camera","270° IP Camera","360° IP Camera","Analog","Audio Bridge","Body camera","Bullet","Control Board","Cube","Dome","Doorstation / Intercom","DVR","Encoder","Fisheye","Fixed IP Camera","Flex lens camera","Hybrid Camera Receiver","Intercom","IP Horn Speaker","Multiple sensors","NVR","Panoramic IP Camera","PTZ IP Camera","Radar","Spy Camera","Thermal Bullet Camera","Thermal PTZ","Turrent IP Camera","Zoom IP Camera"]
+    let deviceType = ["180° IP Camera", "270° IP Camera", "360° IP Camera", "Analog", "Audio Bridge", "Body camera", "Bullet", "Control Board", "Cube", "Dome", "Doorstation / Intercom", "DVR", "Encoder", "Fisheye", "Fixed IP Camera", "Flex lens camera", "Hybrid Camera Receiver", "Intercom", "IP Horn Speaker", "Multiple sensors", "NVR", "Panoramic IP Camera", "PTZ IP Camera", "Radar", "Spy Camera", "Thermal Bullet Camera", "Thermal PTZ", "Turrent IP Camera", "Zoom IP Camera"]
 
 
     let i = 1;
@@ -930,18 +961,18 @@
     $(".DewNo").on("click", () => {
       $(".Dew").css("display", "none");
     });
-// E6 JS
-//     $(".PTZ1").on('click',  (e) =>{
+    // E6 JS
+    //     $(".PTZ1").on('click',  (e) =>{
 
-// $(".PtzBL").text(e.target.innerText);
-// console.log(e.target)
+    // $(".PtzBL").text(e.target.innerText);
+    // console.log(e.target)
 
-// })
+    // })
 
-//Submit button
-$(".submitB").on("click", (e) => {
-  e.preventDefault();
-console.log(`
+    //Submit button
+    $(".submitB").on("click", (e) => {
+      e.preventDefault();
+      console.log(`
                     Salient Systems camera certification sheet
  Name of tester: ${$(".NameOfTester").val().trim()}
  Copleteview Version:
@@ -968,63 +999,88 @@ console.log(`
 
 `)
 
-});
+    });
 
 
-// added focus function
-$('.mac1').on('input', function(event) {
-    let mac = event.currentTarget.value;
-    if( mac.length === 2){
-      $(".mac2").focus()
-    }
-});
-$('.mac2').on('input', function(event) {
-    let mac = event.currentTarget.value;
-    if( mac.length === 2){
-      $(".mac3").focus()
-    }
-});
-$('.mac3').on('input', function(event) {
-    let mac = event.currentTarget.value;
-    if( mac.length === 2){
-      $(".mac4").focus()
-    }
-});
-$('.mac4').on('input', function(event) {
-    let mac = event.currentTarget.value;
-    if( mac.length === 2){
-      $(".mac5").focus()
-    }
-});
+    // added focus function
+    $('.mac1').on('input', function (event) {
+      let mac = event.currentTarget.value;
+      if (mac.length === 2) {
+        $(".mac2").focus()
+      }
+    });
+    $('.mac2').on('input', function (event) {
+      let mac = event.currentTarget.value;
+      if (mac.length === 2) {
+        $(".mac3").focus()
+      }
+    });
+    $('.mac3').on('input', function (event) {
+      let mac = event.currentTarget.value;
+      if (mac.length === 2) {
+        $(".mac4").focus()
+      }
+    });
+    $('.mac4').on('input', function (event) {
+      let mac = event.currentTarget.value;
+      if (mac.length === 2) {
+        $(".mac5").focus()
+      }
+    });
 
-$('.ip1').on('input', function(event) {
-    let ip = event.currentTarget.value;
-    if( ip.length === 3){
-      $(".ip2").focus()
-    }
-});
-$('.ip2').on('input', function(event) {
-    let ip = event.currentTarget.value;
-    if( ip.length === 3){
-      $(".ip3").focus()
-    }
-});
-$('.ip3').on('input', function(event) {
-    let ip = event.currentTarget.value;
-    if( ip.length === 3){
-      $(".ip4").focus()
-    }
-});
+    $('.ip1').on('input', function (event) {
+      let ip = event.currentTarget.value;
+      if (ip.length === 3) {
+        $(".ip2").focus()
+      }
+    });
+    $('.ip2').on('input', function (event) {
+      let ip = event.currentTarget.value;
+      if (ip.length === 3) {
+        $(".ip3").focus()
+      }
+    });
+    $('.ip3').on('input', function (event) {
+      let ip = event.currentTarget.value;
+      if (ip.length === 3) {
+        $(".ip4").focus()
+      }
+    });
 
 
-// PDF
-$(".submitB").on("click", () => {
-  var doc = new jsPDF()
+    // PDF
+    $(".submitB").on("click", () => {
+      var doc = new jsPDF()
 
-doc.text('Hello world!', 10, 10)
-doc.save('a4.pdf')
-})
+      doc.text('Hello world!', 10, 10)
+      doc.save('a4.pdf')
+    })
+  // Text box read only
+  $(function () {
+        $("#checkType").click(function () {
+            if ($(this).is(":checked")) {
+                $(".newTypeCheck").removeAttr("disabled");
+                $(".newTypeCheck").focus();
+                $(".deviceTypeCheck").attr("disabled", "disabled");
+            } else {
+                $(".newTypeCheck").attr("disabled", "disabled");
+                $(".deviceTypeCheck").removeAttr("disabled");
+                $(".deviceTypeCheck").focus();
+            }
+        });
 
+        $(".H264Check").click(function () {
+            if ($(this).is(":checked")) {
+                $(".urlH264Check").removeAttr("disabled");
+                $(".urlH264Check").focus();
+            } else {
+                $(".urlH264Check").attr("disabled", "disabled");
+
+            }
+        });
+    });
+   
+   
   </script>
 </body>
 
