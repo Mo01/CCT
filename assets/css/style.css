@@ -3,7 +3,13 @@
 }
 body{
     background-color: lightgrey;
+    white-space: nowrap;
+    padding-left: 10px;
 }
 .PTZ, .row{
     border: 1px black solid;
 }
+
+label {
+ margin-right: 20px;
+ }

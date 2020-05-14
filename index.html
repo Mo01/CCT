@@ -38,10 +38,10 @@
       <!-- Name of tester -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Name of tester
+          <label for="exampleInputPassword1">Tester
         </div>
         <div class="col-4">
-          <input type="text" class="form-control NameOfTester" placeholder="Name of tester">
+          <input type="text" class="form-control NameOfTester" placeholder="Mo">
         </div>
       </div>
 
@@ -58,7 +58,7 @@
       <!-- Machaine Specs -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Machaine Specs
+          <label for="exampleInputPassword1">Machine Specs
         </div>
         <div class="col-4">
           <input type="text" class="form-control MSpaces" placeholder="Machaine Specs">
@@ -66,7 +66,7 @@
       </div>
 
       <!-- Drivers -->
-      <div class="addDriver">
+      <!-- <div class="addDriver">
         <div class="row">
           <div class="col-2">
             <label for="exampleInputPassword1">Driver(s)
@@ -78,22 +78,15 @@
             <button type="button " class="btn btn-light plusDriver">+</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Manfacture -->
+      <!-- Manfacture / Model -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Manfacture
+          <label for="exampleInputPassword1">Manfacturer/Model
         </div>
         <div class="col-4">
-          <input type="text" class="form-control manfu" placeholder="Manfacture">
-        </div>
-      </div>
-
-      <!-- Model -->
-      <div class="row">
-        <div class="col-2">
-          <label for="exampleInputPassword1">Model
+          <input type="text" class="form-control manfu" placeholder="Manfacturer">
         </div>
         <div class="col-4">
           <input type="text" class="form-control model" placeholder="Model">
@@ -122,7 +115,7 @@
       <!-- Mac address -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Mac address
+          <label for="exampleInputPassword1">Mac Address
         </div>
         <div class="col-1">
           <input type="text" class="form-control mac1" maxlength="2" placeholder="xx">
@@ -171,7 +164,7 @@
         <div class="col-10">
           <!-- H264 Material inline -->
           <div class="row">
-            <div class="col-2">
+            <div class="col-1">
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input H264Check" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">H264</label>
@@ -194,11 +187,19 @@
             <div class="col-6">
               <input type="text" class="form-control urlH264Check"  disabled="disabled" placeholder="URL/Driver">
             </div>
+            <!-- Audio -->
+            <div class="col-2">
+              <div class="form-check form-check-inline audioH264">
+                <input type="checkbox" class="form-check-input" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+              </div>
           </div>
+                
 
           <!-- H265 Material inline -->
           <div class="row">
-            <div class="col-2">
+            <div class="col-1">
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input H265Check" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">H265</label>
@@ -221,11 +222,18 @@
               <div class="col-6">
                 <input type="text" class="form-control urlH265Check"  disabled="disabled" placeholder="URL/Driver">
               </div>
+              <!-- Audio -->
+              <div class="col-2">
+              <div class="form-check form-check-inline audioH265">
+                <input type="checkbox" class="form-check-input" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+              </div>
           </div>
 
           <!-- MJPEG Material inline -->
           <div class="row">
-            <div class="col-2">
+            <div class="col-1">
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input MJPEGCheck" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">MJPEG</label>
@@ -248,10 +256,18 @@
               <div class="col-6">
                 <input type="text" class="form-control urlMJPEGCheck"  disabled="disabled" placeholder="URL/Driver">
               </div>
+                    <!-- Audio -->
+                    <div class="col-2">
+                      <div class="form-check form-check-inline audioMJPEG">
+                        <input type="checkbox" class="form-check-input" id="materialInline2">
+                        <label class="form-check-label " for="materialInline2">Audio</label>
+                      </div>
+                      </div>
           </div>
+          
           <!-- MPEG-4 Material inline -->
           <div class="row">
-            <div class="col-2">
+            <div class="col-1">
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input MPEG4Check" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">MPEG4</label>
@@ -274,41 +290,42 @@
               <div class="col-6">
                 <input type="text" class="form-control urlMPEG4Check"  disabled="disabled" placeholder="URL/Driver">
               </div>
+                  <!-- Audio -->
+            <div class="col-2">
+              <div class="form-check form-check-inline audioMPEG4">
+                <input type="checkbox" class="form-check-input" id="materialInline2">
+                <label class="form-check-label " for="materialInline2">Audio</label>
+              </div>
+              </div>
 
           </div>
         </div>
       </div>
 
-      <!-- Non Supported Stream Types -->
-      <div class="row">
-        <div class="col-2">
-          <label for="exampleInputPassword1">Non Supported Stream Types
-        </div>
-        <div class="col-4">
 
-          <input type="text" class="form-control" placeholder="Non Supported Stream Types">
-        </div>
-      </div>
 
       <!-- Streams ID/CH -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Streams ID/CH
         </div>
-        <div class="col-8">
+        <div class="col-5">
           <!-- CH -->
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input chBox" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">CH.</label><input type="text"
+            <input type="checkbox" class="form-check-input chBox labelSpace" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">Channel count</label><input type="text"
               class="form-control idInput" maxlength="2" placeholder="CH">
           </div>
+        </div>
+          <div class="col-5">
           <!-- ID -->
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input idBox" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">ID.</label><input type="text"
+            <input type="checkbox" class="form-check-input idBox labelSpace" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">Stream count</label><input type="text"
               class="form-control idInput" maxlength="2" placeholder="ID">
           </div>
-        </div>
+          </div>
+        
       </div>
 
 
@@ -319,13 +336,13 @@
           <label for="exampleInputPassword1">User Name:
         </div>
         <div class="col-3">
-          <input type="text" class="form-control uName" placeholder="root">
+          <input type="text" class="form-control uName" >
         </div>
         <div class="col-2">
-          <label for="exampleInputPassword1">Passwords:
+          <label for="exampleInputPassword1">Password:
         </div>
         <div class="col-3">
-          <input type="text" class="form-control pWord" placeholder="**********">
+          <input type="text" class="form-control pWord" >
         </div>
       </div>
 
@@ -352,66 +369,38 @@
 
       </div>
 
-      <!-- Audio -->
-      <div class="row">
-        <div class="col-2">
-          <label for="exampleInputPassword1">Audio
-        </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input nAudio" type="radio" name="gridRadios" value="option12">
-            <label class="form-check-label">
-              No Audio
-            </label>
-          </div>
 
-
-        </div>
-        <div class="col-3">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" value="option13">
-            <label class="form-check-label cvNotSupportAudio">
-              CV does not supported
-            </label>
-          </div>
-
-        </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" value="option14">
-            <label class="form-check-label oneWayAudio">
-              One way
-            </label>
-          </div>
-
-
-        </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" value="option1">
-            <label class="form-check-label twoWayAudio">
-              Two way
-            </label>
-          </div>
-
-        </div>
-
-      </div>
 
       <!-- PTZ -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">PTZ Capable
         </div>
-        <div class="col-1">
-          <label class="radio-inline PtzYes"><input type="radio" name="optradioP">Yes</label>
-
-
+       
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input  cvYPTZ" type="radio" name="gridRadiosPTZ" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              CV supports PTZ
+            </label>
+          </div>
         </div>
-        <div class="col-1">
-          <label class="radio-inline PtzNo"><input type="radio" name="optradioP">No</label>
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input  cYPTZ" type="radio" name="gridRadiosPTZ" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              Camera supports PTZ
+            </label>
+          </div>
         </div>
-
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input  noPTZ" type="radio" name="gridRadiosPTZ" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              Camera doesn't supports PTZ
+            </label>
+          </div>
+        </div>
       </div>
 
       <div class="PTZ">
@@ -813,13 +802,32 @@
           <label for="exampleInputPassword1">Dewarping
         </div>
         <div class="col-2">
-          <label class="radio-inline DewYes"><input type="radio" name="optradioD">Yes</label>
-
-
+          <div class="form-check">
+            <input class="form-check-input  cvYDew" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              CV supports dewarping
+            </label>
+          </div>
         </div>
-        <div class="col-1">
-          <label class="radio-inline DewNo"><input type="radio" name="optradioD">No</label>
+
+        <div class="col-3">
+          <div class="form-check">
+            <input class="form-check-input  cvNDew" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              CV doesn't supports dewarping
+            </label>
+          </div>
         </div>
+
+        <div class="col-3">
+          <div class="form-check">
+            <input class="form-check-input  cNDew" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              Camera doesn't supports dewarping
+            </label>
+          </div>
+        </div>
+
       </div>
       <!-- Dewarping Driver Used -->
       <div class="Dew">
@@ -853,26 +861,32 @@
       <!-- Analytic -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Analytic
+          <label for="exampleInputPassword1">On-Camera events
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input  analyticP" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input  analyticCV" type="radio" name="gridRadiosAn" id="gridRadios1" value="option1">
             <label class="form-check-label" for="gridRadios1">
-              Yes
+              CV supports events
             </label>
           </div>
+        </div>
+        <div class="col-3">
+          <div class="form-check">
+            <input class="form-check-input anaylyticN" type="radio" name="gridRadiosAn" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              CV doesn't supports events
 
-
+            </label>
+          </div>
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input anaylyticF" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input anaylytic" type="radio" name="gridRadiosAn" id="gridRadios1" value="option1">
             <label class="form-check-label" for="gridRadios1">
-              No
+              Camera supports events
             </label>
           </div>
-
         </div>
       </div>
 
@@ -929,10 +943,13 @@
     });
 
     //Display PTZ
-    $(".PtzYes").on("click", () => {
+    $(".cvYPTZ").on("click", () => {
       $(".PTZ").css("display", "block");
     });
-    $(".PtzNo").on("click", () => {
+    $(".noPTZ").on("click", () => {
+      $(".PTZ").css("display", "none");
+    });
+    $(".cYPTZ").on("click", () => {
       $(".PTZ").css("display", "none");
     });
 
@@ -958,10 +975,13 @@
       $(".DewarpingP").append(`<option value="${lensT}">${lensT}</option>`)
     });
     //Dewarping PTZ
-    $(".DewYes").on("click", () => {
+    $(".cvYDew").on("click", () => {
       $(".Dew").css("display", "inline-block");
     });
-    $(".DewNo").on("click", () => {
+    $(".cvNDew").on("click", () => {
+      $(".Dew").css("display", "none");
+    });
+    $(".cNDew").on("click", () => {
       $(".Dew").css("display", "none");
     });
     // E6 JS
