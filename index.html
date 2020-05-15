@@ -38,30 +38,30 @@
       <!-- Name of tester -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Tester
+          <label for="exampleInputPassword1">Tester:
         </div>
         <div class="col-4">
-          <input type="text" class="form-control NameOfTester" placeholder="Mo">
+          <input type="text" class="form-control testerName" value=" Mo" placeholder="Mo">
         </div>
       </div>
 
       <!-- CV Version -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">CV Version
+          <label for="exampleInputPassword1">CV Version:
         </div>
         <div class="col-4">
-          <input type="text" class="form-control CvVersion" placeholder="CV Version">
+          <input type="text" class="form-control cvVersion" placeholder="CV Version">
         </div>
       </div>
 
-      <!-- Machaine Specs -->
+      <!-- Windows Version -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Machine Specs
+          <label for="exampleInputPassword1">Windows Version:
         </div>
         <div class="col-4">
-          <input type="text" class="form-control MSpaces" placeholder="Machaine Specs">
+          <input type="text" class="form-control vWer" placeholder="Machaine Specs">
         </div>
       </div>
 
@@ -83,7 +83,7 @@
       <!-- Manfacture / Model -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Manfacturer/Model
+          <label for="exampleInputPassword1">Manfacturer/Model:
         </div>
         <div class="col-4">
           <input type="text" class="form-control manfu" placeholder="Manfacturer">
@@ -96,7 +96,7 @@
       <!-- Camera's IP -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Camera's IP
+          <label for="exampleInputPassword1">Camera's IP:
         </div>
         <div class="col-1">
           <input type="text" class="form-control ip1" maxlength="3" placeholder="xxx">
@@ -115,7 +115,7 @@
       <!-- Mac address -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Mac Address
+          <label for="exampleInputPassword1">Mac Address:
         </div>
         <div class="col-1">
           <input type="text" class="form-control mac1" maxlength="2" placeholder="xx">
@@ -138,17 +138,17 @@
       <!-- Type -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Device Type
+          <label for="exampleInputPassword1">Device Type:
         </div>
         <div class="col-3">
-          <select class="ui search dropdown deviceType deviceTypeCheck" txtPassportNumber>
-            <option value="">Device type list </option>
+          <select class="ui search dropdown deviceType deviceTypeCheck" >
+            <option class="deviceTypeValue" value="">Device type list </option>
           </select>
         </div>
         <div class="col-4">
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input check" id="checkType" id="materialInline1">
-            <input type="text" class="form-control newTypeCheck" disabled="disabled" placeholder="Add new Type">
+            <input type="text" class="form-control newTypeCheck" disabled="disabled"  value="" placeholder="Add new Type">
           </div>
 
         </div>
@@ -156,30 +156,30 @@
 
 
 
-      <!-- Supported Stream Types -->
+      <!-- compressions -->
       <div class="row">
         <div class="col-2">
-          <label>Supported Stream Types</label>
+          <label>Compressions:</label>
         </div>
         <div class="col-10">
           <!-- H264 Material inline -->
           <div class="row">
             <div class="col-1">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input H264Check" id="materialInline1">
+                <input type="checkbox" class="form-check-input  tcpMPEG4" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">H264</label>
               </div>
             </div>
             <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
+                <input type="checkbox" class="form-check-input tcpH264" id="materialInline1">
                 <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
 
               <!-- UDP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline2">
+                <input type="checkbox" class="form-check-input udpH264" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
@@ -201,7 +201,7 @@
           <div class="row">
             <div class="col-1">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input H265Check" id="materialInline1">
+                <input type="checkbox" class="form-check-input h265Check" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">H265</label>
               </div>
             </div>
@@ -209,13 +209,13 @@
               <!-- TCP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label " for="materialInline1 ">TCP</label>
+                <label class="form-check-label tcpH265" for="materialInline1 ">TCP</label>
               </div>
 
               <!-- UDP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label " for="materialInline2">UDP</label>
+                <label class="form-check-label udpH265" for="materialInline2">UDP</label>
               </div>
             </div>
             <!-- URL/Driver -->
@@ -235,7 +235,7 @@
           <div class="row">
             <div class="col-1">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input MJPEGCheck" id="materialInline1">
+                <input type="checkbox" class="form-check-input mjpegCheck" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">MJPEG</label>
               </div>
             </div>
@@ -243,13 +243,13 @@
               <!-- TCP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label " for="materialInline1 ">TCP</label>
+                <label class="form-check-label " for="materialInline1 tcpMJPEG">TCP</label>
               </div>
 
               <!-- UDP -->
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label " for="materialInline2">UDP</label>
+                <label class="form-check-label " for="materialInline2 udpMJPEG">UDP</label>
               </div>
             </div>
             <!-- URL/Driver -->
@@ -269,20 +269,20 @@
           <div class="row">
             <div class="col-1">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input MPEG4Check" id="materialInline1">
+                <input type="checkbox" class="form-check-input mpeg4Check" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">MPEG4</label>
               </div>
             </div>
             <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label " for="materialInline1 ">TCP</label>
+                <input type="checkbox" class="form-check-input tcpMPEG4" id="materialInline1">
+                <label class="form-check-label" for="materialInline1">TCP</label>
               </div>
 
               <!-- UDP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline2">
+                <input type="checkbox" class="form-check-input  udpMPEG4" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
@@ -304,23 +304,23 @@
 
 
 
-      <!-- Streams ID/CH -->
+      <!-- Streams Channel/Stream count -->
       <div class="row">
-        <div class="col-2">
-          <label for="exampleInputPassword1">Streams ID/CH
+        <div class="col-3">
+          <label for="exampleInputPassword1">Streams Channel/Stream count:
         </div>
-        <div class="col-5">
+        <div class="col-4">
           <!-- CH -->
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input chBox labelSpace" id="materialInline2">
+            <input type="checkbox" class="form-check-input chBox labelSpace chCount" id="materialInline2">
             <label class="form-check-label" for="materialInline2">Channel count</label><input type="text"
               class="form-control idInput" maxlength="2" placeholder="CH">
           </div>
         </div>
-        <div class="col-5">
+        <div class="col-4">
           <!-- ID -->
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input idBox labelSpace" id="materialInline2">
+            <input type="checkbox" class="form-check-input idBox labelSpace streamId" id="materialInline2">
             <label class="form-check-label" for="materialInline2">Stream count</label><input type="text"
               class="form-control idInput" maxlength="2" placeholder="ID">
           </div>
@@ -333,36 +333,31 @@
       <!-- UserName/passwords -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">User Name:
+          <label for="exampleInputPassword1">Login Credentials:
         </div>
         <div class="col-3">
-          <input type="text" class="form-control uName">
-        </div>
-        <div class="col-2">
-          <label for="exampleInputPassword1">Password:
+          <input type="text" class="form-control  Credentials" placeholder="User Name">
         </div>
         <div class="col-3">
-          <input type="text" class="form-control pWord">
+          <input type="text" class="form-control pWord" placeholder="Password">
         </div>
       </div>
 
-      <!-- FW V/Updated -->
+      <!-- FW V-->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">FW V/Updated
+          <label for="exampleInputPassword1">FW Version:
         </div>
 
         <div class="col-4">
 
-          <input type="text" class="form-control" placeholder="FW">
+          <input type="text" class="form-control fwVersion" placeholder="FW">
         </div>
         <div class="col-1">
-          <label class="radio-inline yFWu"><input type="radio" name="optradioF">Yes</label>
-
-
-        </div>
-        <div class="col-1">
-          <label class="radio-inline nFWu"><input type="radio" name="optradioF">No</label>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline1">
+            <label class="form-check-label " for="materialInline1 ">Updated</label>
+          </div>
         </div>
 
 
@@ -374,7 +369,7 @@
       <!-- PTZ -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">PTZ Capable
+          <label for="exampleInputPassword1">PTZ Capable:
         </div>
 
         <div class="col-2">
@@ -440,13 +435,13 @@
 
         </div>
 
-        <!-- Arrow Buttons -->
+        <!-- Pan/Tilt Buttons -->
         <div class="row">
           <div class="col-1">
             <label for="exampleInputPassword1">
           </div>
           <div class="col-2">
-            <label for="exampleInputPassword1">Arrow Buttons
+            <label for="exampleInputPassword1">Pan/Tilt Buttons
           </div>
           <div class="col-2">
             <div class="form-check">
@@ -799,7 +794,7 @@
       <!-- Dewarping -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Dewarping
+          <label for="exampleInputPassword1">Dewarping:
         </div>
         <div class="col-2">
           <div class="form-check">
@@ -848,7 +843,7 @@
 
           <div class="col-2">
             <select class="ui search dropdown DewarpingP">
-              <option value="">None</option>
+              <option value="">Lens Profile</option>
 
             </select>
 
@@ -861,7 +856,7 @@
       <!-- Analytic -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">On-Camera events
+          <label for="exampleInputPassword1">On-Camera events:
         </div>
         <div class="col-2">
           <div class="form-check">
@@ -895,13 +890,13 @@
       <!-- Testing Level -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Testing Level
+          <label for="exampleInputPassword1">Testing Level:
         </div>
         <div class="col-2">
           <div class="form-check">
             <input class="form-check-input  testIn" type="radio" name="gridRadiosTL" id="gridRadios1" value="option1">
             <label class="form-check-label" for="gridRadios1">
-              In House
+              Level 1
             </label>
           </div>
         </div>
@@ -909,14 +904,14 @@
           <div class="form-check">
             <input class="form-check-input testOut" type="radio" name="gridRadiosTL" id="gridRadios1" value="option1">
             <label class="form-check-label" for="gridRadios1">
-              Remotely
+              Level 2
             </label>
           </div>
         </div>
       </div>
       <div class="form-group">
         <label for="comment">Notes:</label>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
+        <textarea class="form-control note" rows="5" id="comment"></textarea>
       </div>
 
 
@@ -1030,7 +1025,7 @@
       e.preventDefault();
       console.log(`
                     Salient Systems camera certification sheet
- Name of tester: ${$(".NameOfTester").val().trim()}
+ Name of tester: ${$(".testerName").val().trim()}
  Copleteview Version:
 
  Driver(s) used:
@@ -1044,7 +1039,7 @@
  Protocols:
  Supported Stream Types:
  Non Supported Stream Types:
- Streams ID/CH:
+ Streams Channel/Stream count:
  UserName/passwords:
  FW V/Updated:
 
@@ -1104,13 +1099,6 @@
     });
 
 
-    // PDF
-    $(".submitB").on("click", () => {
-      var doc = new jsPDF()
-
-      doc.text('Hello world!', 10, 10)
-      doc.save('a4.pdf')
-    })
     // Text box read only
     $(function () {
       $("#checkType").click(function () {
@@ -1125,7 +1113,7 @@
         }
       });
 
-      $(".H264Check").click(function () {
+      $(".h264Check").click(function () {
         if ($(this).is(":checked")) {
           $(".urlH264Check").removeAttr("disabled");
           $(".urlH264Check").focus();
@@ -1135,7 +1123,7 @@
         }
       });
 
-      $(".H265Check").click(function () {
+      $(".h265Check").click(function () {
         if ($(this).is(":checked")) {
           $(".urlH265Check").removeAttr("disabled");
           $(".urlH265Check").focus();
@@ -1164,9 +1152,47 @@
 
         }
       });
-      $(".MSpaces").val("Window NT  " + window.navigator.appVersion.split("NT")[1].split(";")[0].trim())
-      console.log($(".MSpaces").val())
+      $(".vWer").val("Window  " + window.navigator.appVersion.split("NT")[1].split(";")[0].trim())
+      console.log($(".vWer").val())
 
+
+      // PDF
+      $(".submitB").on("click", () => {
+        var doc = new jsPDF({
+          orientation: 'portrait',
+
+        });
+
+        doc.setTextColor(231,77,61);
+        doc.text(85, 20, 'Salient Systems');
+
+        doc.setTextColor(100);
+        doc.text(70, 30, 'Camera Certification Template');
+        
+        doc.setTextColor(100);
+        doc.text(10, 50, "Tester:  " + `${$(".testerName").val().trim()}`);
+        doc.text(10, 60, "CV Version:  " + `${$(".cvVersion").val().trim()}`);
+        doc.text(10, 70, "Windows Version:  " + `${$(".vWer").val().trim()}`);
+        doc.text(10, 80, "Manfacturer:  " + `${$(".manfu").val().trim()}` + "                    " + "Model  :" + `${$(".model").val().trim()}`);
+        doc.text(10, 90, "Camera's IP:  " + `${$(".ip1").val().trim()}` + "." + `${$(".ip2").val().trim()}`  + "." + `${$(".ip3").val().trim()}`  + "." + `${$(".ip4").val().trim()}` + "                    " + "Mac Address:  " + `${$(".mac1").val().trim()}` + ":" + `${$(".mac2").val().trim()}`  + ":" + `${$(".mac3").val().trim()}`  + ":" + `${$(".mac4").val().trim()}` + ":" + `${$(".mac5").val().trim()}`);
+        doc.text(10, 100, "Device Type:  " + (`${$(".deviceTypeCheck").val().trim()}` || `${$(".newTypeCheck").val().trim()}` ));
+        doc.text(10, 110, "Compressions:  ");
+        doc.text(30, 120, "H264:  " +  `${$(".h264Check").val().trim()}` + "TCP:  " +  `${$(".tcpH264").val().trim()}` + "UDP:  " +  `${$(".udpH264").val().trim()}` + "Driver:  " +  `${$(".urlH264Check").val().trim()}` + "Audio:  " +  `${$(".audioH264").val().trim()}`);
+        doc.text(30, 130, "H265:  " +  `${$(".h265Check").val().trim()}` + "TCP:  " +  `${$(".tcpH265").val().trim()}` + "UDP:  " +  `${$(".udpH265").val().trim()}` + "Driver:  " +  `${$(".urlH265Check").val().trim()}` + "Audio:  " +  `${$(".audioH265").val().trim()}`);
+        doc.text(30, 140, "MJPEG:  " +  `${$(".mjpegCheck").val().trim()}` + "TCP:  " +  `${$(".tcpMJPEG").val().trim()}` + "UDP:  " +  `${$(".udpMJPEG").val().trim()}` + "Driver:  " +  `${$(".urlMJPEGCheck").val().trim()}` + "Audio:  " +  `${$(".audioMJPEG").val().trim()}`);
+        doc.text(30, 150, "MPEG4:  " +  `${$(".mpeg4Check").val().trim()}` + "TCP:  " +  `${$(".tcpMPEG4").val().trim()}` + "UDP:  " +  `${$(".udpMPEG4").val().trim()}` + "Driver:  " +  `${$(".urlMPEG4Check").val().trim()}` + "Audio:  " +  `${$(".audioMPEG4").val().trim()}`);
+        doc.text(10, 160, "Channel count:  " +  `${$(".chCount").val().trim()}` + "Stream count:  " +  `${$(".streamId").val().trim()}`);
+        doc.text(10, 170, "User:  "  +  `${$(".UName").val().trim()}` + "Password:  "  +  `${$(".pWord").val().trim()}`);
+        doc.text(10, 150, "FW Version:  " +  `${$(".fwVersion").val().trim()}`);
+        doc.text(10, 160, "PTZ Capable:  " +  `${$(".").val().trim()}`);
+        doc.text(10, 170, "Dewarping:  " + (`${$(".cvYDew").val().trim()}` || `${$(".cvNDew").val().trim()}` || `${$(".cNDew").val().trim()}`));
+        doc.text(10, 180, "On-Camera events:  ");
+        doc.text(10, 190, "Testing Level:  "+ (`${$(".testIn").val().trim()}` || `${$(".testOut").val().trim()}`);
+        doc.text(10, 200, "Notes:  "+ (`${$(".note").val().trim()}`);
+
+        // Save the PDF
+        doc.save('document.pdf');
+      })
 
     });
 
