@@ -166,31 +166,31 @@
           <div class="row">
             <div class="col-1">
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input  tcpMPEG4" id="materialInline1">
+                <input type="checkbox" class="form-check-input  h264Check" value="" id="materialInline1">
                 <label class="form-check-label " for="materialInline1">H264</label>
               </div>
             </div>
             <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input tcpH264" id="materialInline1">
+                <input type="checkbox" class="form-check-input tcpH264" value="" id="materialInline1">
                 <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
 
               <!-- UDP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input udpH264" id="materialInline2">
+                <input type="checkbox" class="form-check-input udpH264" value="" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">UDP</label>
               </div>
             </div>
             <!-- URL/Driver -->
             <div class="col-6">
-              <input type="text" class="form-control urlH264Check" disabled="disabled" placeholder="URL/Driver">
+              <input type="text" class="form-control urlH264Check" value="" disabled="disabled" placeholder="URL/Driver">
             </div>
             <!-- Audio -->
             <div class="col-2">
-              <div class="form-check form-check-inline audioH264">
-                <input type="checkbox" class="form-check-input" id="materialInline2">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input audioH264" value="" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">Audio</label>
               </div>
             </div>
@@ -242,14 +242,14 @@
             <div class="col-2">
               <!-- TCP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline1">
-                <label class="form-check-label " for="materialInline1 tcpMJPEG">TCP</label>
+                <input type="checkbox" class="form-check-input tcpMJPEG" value="" id="materialInline1">
+                <label class="form-check-label " for="materialInline1 ">TCP</label>
               </div>
 
               <!-- UDP -->
               <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label " for="materialInline2 udpMJPEG">UDP</label>
+                <input type="checkbox" class="form-check-input udpMJPEG" value="" id="materialInline2">
+                <label class="form-check-label " for="materialInline2 ">UDP</label>
               </div>
             </div>
             <!-- URL/Driver -->
@@ -258,8 +258,8 @@
             </div>
             <!-- Audio -->
             <div class="col-2">
-              <div class="form-check form-check-inline audioMJPEG">
-                <input type="checkbox" class="form-check-input" id="materialInline2">
+              <div class="form-check form-check-inline ">
+                <input type="checkbox" class="form-check-input audioMJPEG" value="" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">Audio</label>
               </div>
             </div>
@@ -336,7 +336,7 @@
           <label for="exampleInputPassword1">Login Credentials:
         </div>
         <div class="col-3">
-          <input type="text" class="form-control  Credentials" placeholder="User Name">
+          <input type="text" class="form-control  uName" placeholder="User Name">
         </div>
         <div class="col-3">
           <input type="text" class="form-control pWord" placeholder="Password">
@@ -374,7 +374,7 @@
 
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input  cvYPTZ" type="radio" name="gridRadiosPTZ" id="gridRadios1" value="option1">
+            <input class="form-check-input  cvYPTZ" type="radio" name="gridRadiosPTZ" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               CV supports PTZ
             </label>
@@ -382,7 +382,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input  cYPTZ" type="radio" name="gridRadiosPTZ" id="gridRadios1" value="option1">
+            <input class="form-check-input  cYPTZ" type="radio" name="gridRadiosPTZ" value="." id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               Camera supports PTZ
             </label>
@@ -390,7 +390,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input  noPTZ" type="radio" name="gridRadiosPTZ" id="gridRadios1" value="option1">
+            <input class="form-check-input  noPTZ" type="radio" name="gridRadiosPTZ" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               Camera doesn't supports PTZ
             </label>
@@ -445,7 +445,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input arrowP" type="radio" name="gridRadiosAB" id="gridRadios" value="option1">
+              <input class="form-check-input arrowP" type="radio" name="gridRadiosAB" id="gridRadios" >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -455,7 +455,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input arrowF" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
+              <input class="form-check-input arrowF" type="radio" name="gridRadiosAB" id="gridRadios1" >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -464,7 +464,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
+              <input class="form-check-input" type="radio" name="gridRadiosAB" id="gridRadios1" >
               <label class="form-check-label arrowNS">
                 Not supported
               </label>
@@ -483,7 +483,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input zoomP" type="radio" name="gridRadiosIO" id="gridRadios" value="option1">
+              <input class="form-check-input zoomP" type="radio" name="gridRadiosIO" id="gridRadios" >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -493,7 +493,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input zoomF" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
+              <input class="form-check-input zoomF" type="radio" name="gridRadiosIO" id="gridRadios1" >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -502,7 +502,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input zoomNS" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
+              <input class="form-check-input zoomNS" type="radio" name="gridRadiosIO" id="gridRadios1" >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -521,7 +521,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input irisP" type="radio" name="gridRadiosIB" id="gridRadios" value="option1">
+              <input class="form-check-input irisP" type="radio" name="gridRadiosIB" id="gridRadios" >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -531,7 +531,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input irisF" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
+              <input class="form-check-input irisF" type="radio" name="gridRadiosIB" id="gridRadios1" >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -540,7 +540,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input irisNS" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
+              <input class="form-check-input irisNS" type="radio" name="gridRadiosIB" id="gridRadios1" >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -559,7 +559,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input foucsP" type="radio" name="gridRadios" id="gridRadios" value="option1">
+              <input class="form-check-input foucsP" type="radio" name="gridRadios" id="gridRadios" >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -569,7 +569,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input foucsF" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+              <input class="form-check-input foucsF" type="radio" name="gridRadios" id="gridRadios1" >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -578,7 +578,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input focusNS" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+              <input class="form-check-input focusNS" type="radio" name="gridRadios" id="gridRadios1" >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -597,7 +597,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input aIrisP" type="radio" name="gridRadiosAI" id="gridRadios" value="option1">
+              <input class="form-check-input aIrisP" type="radio" name="gridRadiosAI" id="gridRadios" >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -607,7 +607,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input aIrisF" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
+              <input class="form-check-input aIrisF" type="radio" name="gridRadiosAI" id="gridRadios1" >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -616,7 +616,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input aIrisNS" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
+              <input class="form-check-input aIrisNS" type="radio" name="gridRadiosAI" id="gridRadios1" >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -635,7 +635,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input aFocusP" type="radio" name="gridRadiosAF" id="gridRadios" value="option1">
+              <input class="form-check-input aFocusP" type="radio" name="gridRadiosAF" id="gridRadios" >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -645,7 +645,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
+              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -654,7 +654,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
+              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -675,7 +675,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input ptzSppedP" type="radio" name="gridRadiosPSA" id="gridRadios"
-                value="option1">
+                >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -686,7 +686,7 @@
           <div class="col-1">
             <div class="form-check">
               <input class="form-check-input ptzSppedF" type="radio" name="gridRadiosPSA" id="gridRadios1"
-                value="option1">
+                >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -696,7 +696,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input ptzSppedNS" type="radio" name="gridRadiosPSA" id="gridRadios1"
-                value="option1">
+                >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -717,7 +717,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input presetSetP" type="radio" name="gridRadiosPP" id="gridRadios"
-                value="option1">
+                >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -728,7 +728,7 @@
           <div class="col-1">
             <div class="form-check">
               <input class="form-check-input presetSetF" type="radio" name="gridRadiosPP" id="gridRadios1"
-                value="option1">
+                >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -738,7 +738,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input presetSetNS" type="radio" name="gridRadiosPP" id="gridRadios1"
-                value="option1">
+                >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -759,7 +759,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input presetShowP" type="radio" name="gridRadiosPPS" id="gridRadios"
-                value="option1">
+                >
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -770,7 +770,7 @@
           <div class="col-1">
             <div class="form-check">
               <input class="form-check-input presetShowF" type="radio" name="gridRadiosPPS" id="gridRadios1"
-                value="option1">
+                >
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -780,7 +780,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input presetShowNS" type="radio" name="gridRadiosPPS" id="gridRadios1"
-                value="option1">
+                >
               <label class="form-check-label">
                 Not supported
               </label>
@@ -798,7 +798,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input  cvYDew" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input  cvYDew" type="radio" name="gridRadios" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               CV supports dewarping
             </label>
@@ -807,7 +807,7 @@
 
         <div class="col-3">
           <div class="form-check">
-            <input class="form-check-input  cvNDew" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input  cvNDew" type="radio" name="gridRadios" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               CV doesn't supports dewarping
             </label>
@@ -816,7 +816,7 @@
 
         <div class="col-3">
           <div class="form-check">
-            <input class="form-check-input  cNDew" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input  cNDew" type="radio" name="gridRadios" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               Camera doesn't supports dewarping
             </label>
@@ -861,7 +861,7 @@
         <div class="col-2">
           <div class="form-check">
             <input class="form-check-input  analyticCV" type="radio" name="gridRadiosAn" id="gridRadios1"
-              value="option1">
+              >
             <label class="form-check-label" for="gridRadios1">
               CV supports events
             </label>
@@ -870,7 +870,7 @@
         <div class="col-3">
           <div class="form-check">
             <input class="form-check-input anaylyticN" type="radio" name="gridRadiosAn" id="gridRadios1"
-              value="option1">
+              >
             <label class="form-check-label" for="gridRadios1">
               CV doesn't supports events
 
@@ -879,7 +879,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input anaylytic" type="radio" name="gridRadiosAn" id="gridRadios1" value="option1">
+            <input class="form-check-input anaylytic" type="radio" name="gridRadiosAn" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               Camera supports events
             </label>
@@ -890,11 +890,11 @@
       <!-- Testing Level -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Testing Level:
+          <label >Testing Level:
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input  testIn" type="radio" name="gridRadiosTL" id="gridRadios1" value="option1">
+            <input class="form-check-input  testIn" type="radio" name="gridRadiosTL" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               Level 1
             </label>
@@ -902,7 +902,7 @@
         </div>
         <div class="col-3">
           <div class="form-check">
-            <input class="form-check-input testOut" type="radio" name="gridRadiosTL" id="gridRadios1" value="option1">
+            <input class="form-check-input testOut" type="radio" name="gridRadiosTL" value="" id="gridRadios1" >
             <label class="form-check-label" for="gridRadios1">
               Level 2
             </label>
@@ -1162,6 +1162,7 @@
           orientation: 'portrait',
 
         });
+        doc.ellipse(105, 25, 60, 15, 'S');
 
         doc.setTextColor(231,77,61);
         doc.text(85, 20, 'Salient Systems');
@@ -1177,18 +1178,18 @@
         doc.text(10, 90, "Camera's IP:  " + `${$(".ip1").val().trim()}` + "." + `${$(".ip2").val().trim()}`  + "." + `${$(".ip3").val().trim()}`  + "." + `${$(".ip4").val().trim()}` + "                    " + "Mac Address:  " + `${$(".mac1").val().trim()}` + ":" + `${$(".mac2").val().trim()}`  + ":" + `${$(".mac3").val().trim()}`  + ":" + `${$(".mac4").val().trim()}` + ":" + `${$(".mac5").val().trim()}`);
         doc.text(10, 100, "Device Type:  " + (`${$(".deviceTypeCheck").val().trim()}` || `${$(".newTypeCheck").val().trim()}` ));
         doc.text(10, 110, "Compressions:  ");
-        doc.text(30, 120, "H264:  " +  `${$(".h264Check").val().trim()}` + "TCP:  " +  `${$(".tcpH264").val().trim()}` + "UDP:  " +  `${$(".udpH264").val().trim()}` + "Driver:  " +  `${$(".urlH264Check").val().trim()}` + "Audio:  " +  `${$(".audioH264").val().trim()}`);
-        doc.text(30, 130, "H265:  " +  `${$(".h265Check").val().trim()}` + "TCP:  " +  `${$(".tcpH265").val().trim()}` + "UDP:  " +  `${$(".udpH265").val().trim()}` + "Driver:  " +  `${$(".urlH265Check").val().trim()}` + "Audio:  " +  `${$(".audioH265").val().trim()}`);
-        doc.text(30, 140, "MJPEG:  " +  `${$(".mjpegCheck").val().trim()}` + "TCP:  " +  `${$(".tcpMJPEG").val().trim()}` + "UDP:  " +  `${$(".udpMJPEG").val().trim()}` + "Driver:  " +  `${$(".urlMJPEGCheck").val().trim()}` + "Audio:  " +  `${$(".audioMJPEG").val().trim()}`);
-        doc.text(30, 150, "MPEG4:  " +  `${$(".mpeg4Check").val().trim()}` + "TCP:  " +  `${$(".tcpMPEG4").val().trim()}` + "UDP:  " +  `${$(".udpMPEG4").val().trim()}` + "Driver:  " +  `${$(".urlMPEG4Check").val().trim()}` + "Audio:  " +  `${$(".audioMPEG4").val().trim()}`);
+        doc.text(30, 120, "H264:  " +  `${$(".h264Check").val().trim()}` + "   TCP:  " +  `${$(".tcpH264").val().trim()}` + "  UDP:  " +  `${$(".udpH264").val().trim()}` + "  Driver:  " +  `${$(".urlH264Check").val().trim()}` + "  Audio:  " +  `${$(".audioH264").val().trim()}`);
+        doc.text(30, 130, "H265:  " +  `${$(".h265Check").val().trim()}` + "  TCP:  " +  `${$(".tcpH265").val().trim()}` + "  UDP:  " +  `${$(".udpH265").val().trim()}` + "  Driver:  " +  `${$(".urlH265Check").val().trim()}` + "  Audio:  " +  `${$(".audioH265").val().trim()}`);
+        doc.text(30, 140, "MJPEG:  " +  `${$(".mjpegCheck").val().trim()}` + "  TCP:  " +  `${$(".tcpMJPEG").val().trim()}` + "  UDP:  " +  `${$(".udpMJPEG").val().trim()}` + "  Driver:  " +  `${$(".urlMJPEGCheck").val().trim()}` + "  Audio:  " +  `${$(".audioMJPEG").val().trim()}`);
+        doc.text(30, 150, "MPEG4:  " +  `${$(".mpeg4Check").val().trim()}` + "  TCP:  " +  `${$(".tcpMPEG4").val().trim()}` + "  UDP:  " +  `${$(".udpMPEG4").val().trim()}` + "  Driver:  " +  `${$(".urlMPEG4Check").val().trim()}` + "  Audio:  " +  `${$(".audioMPEG4").val().trim()}`);
         doc.text(10, 160, "Channel count:  " +  `${$(".chCount").val().trim()}` + "Stream count:  " +  `${$(".streamId").val().trim()}`);
-        doc.text(10, 170, "User:  "  +  `${$(".UName").val().trim()}` + "Password:  "  +  `${$(".pWord").val().trim()}`);
-        doc.text(10, 150, "FW Version:  " +  `${$(".fwVersion").val().trim()}`);
-        doc.text(10, 160, "PTZ Capable:  " +  `${$(".").val().trim()}`);
-        doc.text(10, 170, "Dewarping:  " + (`${$(".cvYDew").val().trim()}` || `${$(".cvNDew").val().trim()}` || `${$(".cNDew").val().trim()}`));
-        doc.text(10, 180, "On-Camera events:  ");
-        doc.text(10, 190, "Testing Level:  "+ (`${$(".testIn").val().trim()}` || `${$(".testOut").val().trim()}`);
-        doc.text(10, 200, "Notes:  "+ (`${$(".note").val().trim()}`);
+        doc.text(10, 170, "User:  "  +  `${$(".uName").val().trim()}` + "Password:  "  +  `${$(".pWord").val().trim()}`);
+        doc.text(10, 180, "FW Version:  " +  `${$(".fwVersion").val().trim()}`);
+        doc.text(10, 190, "PTZ Capable:  " +  (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}`  || `${$("cNPTZ").val().trim()}`));
+        doc.text(10, 200, "Dewarping:  " + (`${$(".cvYDew").val().trim()}` || `${$(".cvNDew").val().trim()}` || `${$(".cNDew").val().trim()}`));
+        doc.text(10, 210, "On-Camera events:  ");
+        doc.text(10, 220, "Testing Level:  "+ `${$(".testIn").val().trim()}` || `${$(".testOut").val().trim()}`);
+        doc.text(10, 230, "Notes:  "+ `${$(".note").val().trim()}`);
 
         // Save the PDF
         doc.save('document.pdf');
