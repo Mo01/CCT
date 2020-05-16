@@ -6,6 +6,9 @@ body{
     white-space: nowrap;
     padding-left: 10px;
 }
+.container{
+    background-color: lightcyan;
+}
 .PTZ, .row{
     border: 1px black solid;
 }
