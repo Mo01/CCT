@@ -1251,7 +1251,8 @@
         let events = $("#events").val();
         let testLs = $("#testLs").val();
 
-
+        let m = new Date();
+        let dateString = ("0" + (m.getUTCMonth() + 1)).slice(-2) + "/" + ("0" + m.getUTCDate()).slice(-2) + "/" +  m.getUTCFullYear()  ;
 
 
         if( testerName !== "" && cvVersion !== "" && placeholder !== "" && manfu !== "" && model !== "" && ip1 !== "" && ip2 !== "" && ip3 !== "" && ip4 !== "" && mac1 !== "" && mac2 !== "" && mac3 !== "" && mac4 !== "" && mac5 !== "" && chCount !== "" && streamId !== "" && uName !== "" && pWord !== "" && fwVersion !== "" && ptzs !== "" && dewarpings !== "" && events !== "" && testLs !== "")
@@ -1259,21 +1260,24 @@
 
         var doc = new jsPDF({
           orientation: 'portrait',});
+        doc.rect(5, 5,  200, 290); 
+        doc.text(170, 10, `${dateString}`);
+        doc.ellipse(100, 25, 50, 13, 'S');
 
-        doc.ellipse(105, 25, 60, 15, 'S');
-
+        
         doc.setTextColor(231, 77, 61);
-        doc.text(85, 20, 'Salient Systems');
+        doc.text(80, 20, 'Salient Systems');
+
 
         doc.setTextColor(100);
-        doc.text(70, 30, 'Camera Certification Template');
+        doc.text(65, 30, 'Camera Certification Template');
 
         doc.setTextColor(100);
         doc.text(10, 50, "Tester:  " + `${$(".testerName").val().trim()}`);
         doc.text(10, 60, "CV Version:  " + `${$(".cvVersion").val().trim()}`);
         doc.text(10, 70, "Windows Version:  " + `${$(".vWer").val().trim()}`);
         doc.text(10, 80, "Manfacturer:  " + `${$(".manfu").val().trim()}` + "                    " + "Model  :" + `${$(".model").val().trim()}`);
-        doc.text(10, 90, "Camera's IP:  " + `${$(".ip1").val().trim()}` + "." + `${$(".ip2").val().trim()}` + "." + `${$(".ip3").val().trim()}` + "." + `${$(".ip4").val().trim()}` + "                    " + "Mac Address:  " + `${$(".mac1").val().trim()}` + ":" + `${$(".mac2").val().trim()}` + ":" + `${$(".mac3").val().trim()}` + ":" + `${$(".mac4").val().trim()}` + ":" + `${$(".mac5").val().trim()}`);
+        doc.text(10, 90, "Camera's IP:  " + `${$(".ip1").val().trim()}` + "." + `${$(".ip2").val().trim()}` + "." + `${$(".ip3").val().trim()}` + "." + `${$(".ip4").val().trim()}` + "      " + "Mac Address:  " + `${$(".mac1").val().trim()}` + ":" + `${$(".mac2").val().trim()}` + ":" + `${$(".mac3").val().trim()}` + ":" + `${$(".mac4").val().trim()}` + ":" + `${$(".mac5").val().trim()}`);
         doc.text(10, 100, "Device Type:  " + (`${$(".deviceTypeCheck").val().trim()}` || `${$(".newTypeCheck").val().trim()}`));
         doc.text(10, 110, "Compressions:  ");
         doc.text(30, 120, "H264:  " + `${$(".h264Check").val().trim()}` + "     TCP:  " + `${$(".tcpH264").val().trim()}` + "  UDP:  " + `${$(".udpH264").val().trim()}` + "  Driver:  " + `${$(".urlH264Check").val().trim()}` + "  Audio:  " + `${$(".audioH264").val().trim()}`);
@@ -1284,29 +1288,33 @@
         doc.text(10, 170, "User:  " + `${$(".uName").val().trim()}` + "Password:  " + `${$(".pWord").val().trim()}`);
         doc.text(10, 180, "FW Version:  " + (`${$(".fwVersion").val().trim()}`) + "   " + (`${$(".updated").val().trim()}`));
         doc.text(10, 190, "PTZ Capable:  " + (`${$("#ptzs").val().trim()}`));
-        doc.text(30, 200, "PTZ Driver Used:    " + `${$(".ptzDriverValue").val().trim()}` + "  PTZ ID Used:  " + `${$(".ptzId").val().trim()}`);
-        doc.text(30, 210, "Pan/Tilt Buttons:    " + (`${$("#panTilts").val().trim()}`) + "  Zoom In/Out Buttons:  " + (`${$("#zooms").val().trim()}`));
-        doc.text(30, 220, "Iris Buttons:    " + (`${$("#iriss").val().trim()}`) + "  Auto Iris:  " + (`${$("#aIRISs").val().trim()}`));
-        doc.text(30, 230, "Focus Buttons:    " + (`${$("#focuss").val().trim()}`) + "  Auto Focus:  " + (`${$("#aFocuss").val().trim()}`));
-        doc.text(30, 240, "Preset Position Set:    " + (`${$("#presetSets").val().trim()}`) + "  Preset Position Show:  " + (`${$("#presetShows").val().trim()}`));
+        doc.text(30, 200, "PTZ Driver Used:    " + `${$(".ptzDriverValue").val().trim()}` + "               " + "PTZ ID Used:  " + `${$(".ptzId").val().trim()}`);
+        doc.text(30, 210, "Pan/Tilt Buttons:    " + (`${$("#panTilts").val().trim()}`) + "           " + "Zoom In/Out Buttons:  " + (`${$("#zooms").val().trim()}`));
+        doc.text(30, 220, "Iris Buttons:    " + (`${$("#iriss").val().trim()}`) + "                  " + "Auto Iris:  " + (`${$("#aIRISs").val().trim()}`));
+        doc.text(30, 230, "Focus Buttons:    " + (`${$("#focuss").val().trim()}`) + "             " + "Auto Focus:  " + (`${$("#aFocuss").val().trim()}`));
+        doc.text(30, 240, "Preset Position Set:    " + (`${$("#presetSets").val().trim()}`) + "          " + "  Preset Position Show:  " + (`${$("#presetShows").val().trim()}`));
         doc.text(30, 250, "PTZ Speed Adjust:    " + (`${$("#ptzSppeds").val().trim()}` ));
         doc.text(10, 260, "Dewarping:  " + (`${$("#dewarpings").val().trim()}`));
         doc.text(10, 270, "On-Camera events:  " + (`${$("#events").val().trim()}`));
         doc.text(10, 280, "Testing Level:  " + (`${$("#testLs").val().trim()}`));
 
         doc.addPage();
-        doc.ellipse(105, 25, 60, 15, 'S');
+        doc.rect(5, 5,  200, 290); 
+        doc.text(170, 10, `${dateString}`);
+        doc.ellipse(100, 25, 50, 13, 'S');
 
+        
         doc.setTextColor(231, 77, 61);
-        doc.text(85, 20, 'Salient Systems');
+        doc.text(80, 20, 'Salient Systems');
+
 
         doc.setTextColor(100);
-        doc.text(70, 30, 'Camera Certification Template');
+        doc.text(65, 30, 'Camera Certification Template');
         doc.text(10, 50, "Notes:  " + `${$(".note").val().trim()}`);
 
         doc.setTextColor(100);
         // Save the PDF
-        doc.save('document.pdf');
+        doc.save(`${$(".manfu").val().trim()}` + "_" + `${$(".model").val().trim()}` + ".pdf");
       }})
       
     });
