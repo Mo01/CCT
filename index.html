@@ -41,7 +41,7 @@
           <label >Tester:
         </div>
         <div class="col-4">
-          <input type="text" class="form-control testerName" value=" Mo" placeholder="Mo">
+          <input type="text" class="form-control testerName" value="" placeholder="Mo" required>
         </div>
       </div>
 
@@ -51,7 +51,7 @@
           <label >CV Version:
         </div>
         <div class="col-4">
-          <input type="text" class="form-control cvVersion" placeholder="CV Version">
+          <input type="text" class="form-control cvVersion" value="" placeholder="CV Version" required>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
           <label >Windows Version:
         </div>
         <div class="col-4">
-          <input type="text" class="form-control vWer" placeholder="Machaine Specs">
+          <input type="text" class="form-control vWer"   placeholder="Machaine Specs" >
         </div>
       </div>
 
@@ -85,11 +85,11 @@
         <div class="col-2">
           <label >Manfacturer/Model:
         </div>
-        <div class="col-4">
-          <input type="text" class="form-control manfu" placeholder="Manfacturer">
+        <div class="col-4"> 
+          <input type="text" class="form-control manfu" value="" placeholder="Manfacturer" required>
         </div>
         <div class="col-4">
-          <input type="text" class="form-control model" placeholder="Model">
+          <input type="text" class="form-control model" value="" placeholder="Model" required>
         </div>
       </div>
 
@@ -99,16 +99,16 @@
           <label >Camera's IP:
         </div>
         <div class="col-1">
-          <input type="text" class="form-control ip1" maxlength="3" placeholder="xxx">
+          <input type="text" class="form-control ip1" value="" maxlength="3" placeholder="xxx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control ip2" maxlength="3" placeholder="xxx">
+          <input type="text" class="form-control ip2" value="" maxlength="3" placeholder="xxx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control ip3" maxlength="3" placeholder="xxx">
+          <input type="text" class="form-control ip3" value="" maxlength="3" placeholder="xxx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control ip4" maxlength="3" placeholder="xxx">
+          <input type="text" class="form-control ip4" value="" maxlength="3" placeholder="xxx" required>
         </div>
       </div>
 
@@ -118,19 +118,19 @@
           <label >Mac Address:
         </div>
         <div class="col-1">
-          <input type="text" class="form-control mac1" maxlength="2" placeholder="xx">
+          <input type="text" class="form-control mac1" value="" maxlength="2" placeholder="xx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control mac2" maxlength="2" placeholder="xx">
+          <input type="text" class="form-control mac2" value="" maxlength="2" placeholder="xx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control mac3" maxlength="2" placeholder="xx">
+          <input type="text" class="form-control mac3" value="" maxlength="2" placeholder="xx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control mac4" maxlength="2" placeholder="xx">
+          <input type="text" class="form-control mac4" value="" maxlength="2" placeholder="xx" required>
         </div>
         <div class="col-1">
-          <input type="text" class="form-control mac5" maxlength="2" placeholder="xx">
+          <input type="text" class="form-control mac5"  value=""maxlength="2" placeholder="xx"required>
         </div>
 
       </div>
@@ -340,11 +340,11 @@
         </div>
         <!-- CH -->
         <div class="input-group col-4">
-          <input type="text" class="form-control chCount " placeholder="Channel count" maxlength="2">
+          <input type="text" class="form-control chCount " placeholder="Channel count" value="" maxlength="2" required>
         </div>
         <!-- ID -->
         <div class="input-group col-4">
-          <input type="text" class="form-control streamId " placeholder="Stream count" maxlength="2">
+          <input type="text" class="form-control streamId " placeholder="Stream count" value=""  maxlength="2" required>
         </div>
       </div>
 
@@ -356,10 +356,10 @@
           <label >Login Credentials:
         </div>
         <div class="col-3">
-          <input type="text" class="form-control  uName" placeholder="User Name">
+          <input type="text" class="form-control  uName" value="" placeholder="User Name" required>
         </div>
         <div class="col-3">
-          <input type="text" class="form-control pWord" placeholder="Password">
+          <input type="text" class="form-control pWord" value="" placeholder="Password" required>
         </div>
       </div>
 
@@ -371,12 +371,12 @@
 
         <div class="col-4">
 
-          <input type="text" class="form-control fwVersion" placeholder="FW">
+          <input type="text" class="form-control fwVersion" value="" placeholder="FW" required>
         </div>
         <div class="col-1">
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input" id="materialInline1">
-            <label class="form-check-label " for="materialInline1 ">Updated</label>
+            <input type="checkbox" class="form-check-input updated" value="">
+            <label class="form-check-label ">Updated</label>
           </div>
         </div>
 
@@ -391,33 +391,16 @@
         <div class="col-2">
           <label >PTZ Capable:
         </div>
-
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input  cvYPTZ" type="radio" name="gridRadiosPTZ" value="" >
-            <label class="form-check-label" >
-              CV supports PTZ
-            </label>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input  cYPTZ" type="radio" name="gridRadiosPTZ" value="." >
-            <label class="form-check-label" >
-              Camera supports PTZ
-            </label>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input  noPTZ" type="radio" name="gridRadiosPTZ" value="" >
-            <label class="form-check-label" >
-              Camera doesn't supports PTZ
-            </label>
+        <div class="col-8">
+          <div id="ptzs" value="">
+            <input type="radio" id="ptzCV" name="ptz" value="CV supports PTZ" required> CV supports PTZ
+            <input type="radio" id="ptzC" name="ptz" value="Camera supports PTZ"> Camera supports PTZ
+            <input type="radio" id="ptzCD" name="ptz" value="Camera doesn't supports PTZ"> Camera doesn't supports PTZ
           </div>
         </div>
       </div>
 
+      <!-- PTZ support list -->
       <div class="PTZ">
 
         <!-- PTZ Driver Used -->
@@ -426,7 +409,7 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >PTZ Driver Used
           </div>
           <div class="col-2">
@@ -441,25 +424,25 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >PTZ ID Used
           </div>
           <div class="col-2">
-            <input type="text" class="form-control ptzId" placeholder="ID">
+            <input type="text" class="form-control ptzId" value="" placeholder="ID">
           </div>
 
         </div>
 
         <!-- Pan/Tilt Buttons -->
-        <div class="row panTilt" value="">
+        <div class="row">
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Pan/Tilt Buttons
           </div>
           <div class="col-4">
-            <div id="panTilts">
+            <div id="panTilts" value="None">
               <input type="radio" id="panTiltP" name="panTilt" value="Pass"> Pass
               <input type="radio" id="panTiltF" name="panTilt" value="Failed"> Failed
               <input type="radio" id="panTiltNS" name="panTilt" value="Not supported" > Not supported  
@@ -472,11 +455,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Zoom In/Out Buttons
           </div>
           <div class="col-4">
-            <div id="zooms">
+            <div id="zooms" value="None">
               <input type="radio" id="zoomP" name="zoom" value="Pass"> Pass
               <input type="radio" id="zoomF" name="zoom" value="Failed"> Failed
               <input type="radio" id="zoomNS" name="zoom" value="Not supported" > Not supported  
@@ -490,11 +473,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Iris Buttons
           </div>
           <div class="col-4">
-            <div id="iriss">
+            <div id="iriss" value="None">
               <input type="radio" id="irisP" name="iris" value="Pass"> Pass
               <input type="radio" id="irisF" name="iris" value="Failed"> Failed
               <input type="radio" id="irisNS" name="iris" value="Not supported" > Not supported  
@@ -508,10 +491,10 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Focus Buttons
           </div>
-          <div class="col-4">
+          <div class="col-4" value="None">
             <div id="focuss">
               <input type="radio" id="focusP" name="focus" value="Pass"> Pass
               <input type="radio" id="focusF" name="focus" value="Failed"> Failed
@@ -525,11 +508,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Auto Iris
           </div>
           <div class="col-4">
-            <div id="aIRISs">
+            <div id="aIRISs" value="None">
               <input type="radio" id="aIRISP" name="aIRIS" value="Pass"> Pass
               <input type="radio" id="aIRISF" name="aIRIS" value="Failed"> Failed
               <input type="radio" id="aIRISNS" name="aIRIS" value="Not supported" > Not supported  
@@ -543,11 +526,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Auto Focus
           </div>
           <div class="col-4">
-            <div id="aFocuss">
+            <div id="aFocuss" value="None">
               <input type="radio" id="aFocusP" name="aFocus" value="Pass"> Pass
               <input type="radio" id="aFocusF" name="aFocus" value="Failed"> Failed
               <input type="radio" id="aFocusNS" name="aFocus" value="Not supported" > Not supported  
@@ -562,11 +545,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >PTZ Speed Adjust
           </div>
-          <div class="col-4">
-            <div id="ptzSppeds">
+          <div class="col-4" >
+            <div id="ptzSppeds" value="None">
               <input type="radio" id="ptzSppedP" name="ptzSpped" value="Pass"> Pass
               <input type="radio" id="ptzSppedF" name="ptzSpped" value="Failed"> Failed
               <input type="radio" id="ptzSppedNS" name="ptzSpped" value="Not supported" > Not supported  
@@ -580,11 +563,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Preset Position Set
           </div>
           <div class="col-4">
-            <div id="presetSets">
+            <div id="presetSets" value="None">
               <input type="radio" id="presetSetP" name="presetSet" value="Pass"> Pass
               <input type="radio" id="presetSetF" name="presetSet" value="Failed"> Failed
               <input type="radio" id="presetSetNS" name="presetSet" value="Not supported" > Not supported  
@@ -598,11 +581,11 @@
           <div class="col-1">
             <label >
           </div>
-          <div class="col-2">
+          <div class="col-4">
             <label >Preset Position Show
           </div>
           <div class="col-4">
-            <div id="presetShows">
+            <div id="presetShows" value="None">
               <input type="radio" id="presetShowP" name="presetShow" value="Pass"> Pass
               <input type="radio" id="presetShowF" name="presetShow" value="Failed"> Failed
               <input type="radio" id="presetShowNS" name="presetShow" value="Not supported" > Not supported  
@@ -611,96 +594,56 @@
       </div>
 
       </div>
+
       <!-- Dewarping -->
       <div class="row">
         <div class="col-2">
-          <label >Dewarping:
+          <label>Dewarping:
         </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input  cvYDew" type="radio" name="gridRadios" value="" >
-            <label class="form-check-label" >
-              CV supports dewarping
-            </label>
+        <div class="col-8">
+          <div id="dewarpings" value="">
+            <input type="radio" id="dewarpingCVP" name="dewarping" value="CV supports dewarping" required > CV supports dewarping
+            <input type="radio" id="dewarpingCVF" name="dewarping" value="CV doesn't supports dewarping"> CV doesn't supports dewarping
+            <input type="radio" id="dewarpingCNS" name="dewarping" value="Camera doesn't supports dewarping"> Camera doesn't supports dewarping
           </div>
         </div>
-
-        <div class="col-3">
-          <div class="form-check">
-            <input class="form-check-input  cvNDew" type="radio" name="gridRadios" value="" >
-            <label class="form-check-label" >
-              CV doesn't supports dewarping
-            </label>
-          </div>
-        </div>
-
-        <div class="col-3">
-          <div class="form-check">
-            <input class="form-check-input  cNDew" type="radio" name="gridRadios" value="" >
-            <label class="form-check-label" >
-              Camera doesn't supports dewarping
-            </label>
-          </div>
-        </div>
-
       </div>
+      
       <!-- Dewarping Driver Used -->
-      <div class="Dew">
-
+      <div class="dew" display="None">
         <div class="row ">
           <div class="col-1">
-
           </div>
-          <div class="col-3">
-            <label >Dewarping Driver
+          <div class="col-4">
+            <label>Dewarping Driver
           </div>
           <div class="col-4">
             <select class="ui search dropdown DewarpingT">
               <option value="">Drivers list </option>
-
             </select>
           </div>
-
           <div class="col-2">
             <select class="ui search dropdown DewarpingP">
               <option value="">Lens Profile</option>
-
+      
             </select>
-
+      
           </div>
         </div>
-
+      
       </div>
 
 
-      <!-- Analytic -->
+      <!-- Events -->
       <div class="row">
         <div class="col-2">
           <label >On-Camera events:
         </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input  analyticCV" type="radio" name="gridRadiosAn" >
-            <label class="form-check-label" >
-              CV supports events
-            </label>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="form-check">
-            <input class="form-check-input anaylyticN" type="radio" name="gridRadiosAn" >
-            <label class="form-check-label" >
-              CV doesn't supports events
-
-            </label>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input anaylytic" type="radio" name="gridRadiosAn" >
-            <label class="form-check-label" >
-              Camera supports events
-            </label>
+        <div class="col-8">
+          <div id="events" value="">
+            <input type="radio" id="eventCVP" name="event" value="CV supports events" required> CV supports events
+            <input type="radio" id="eventCVF" name="event" value="CV doesn't supports dewarping"> CV doesn't supports events
+            <input type="radio" id="eventCNS" name="event" value="Camera doesn't supports dewarping"> CV doesn't supports events
           </div>
         </div>
       </div>
@@ -710,23 +653,15 @@
         <div class="col-2">
           <label>Testing Level:
         </div>
-        <div class="col-2">
-          <div class="form-check">
-            <input class="form-check-input  testIn" type="radio" name="gridRadiosTL" value="" >
-            <label class="form-check-label" >
-              Level 1
-            </label>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="form-check">
-            <input class="form-check-input testOut" type="radio" name="gridRadiosTL" value="" >
-            <label class="form-check-label" >
-              Level 2
-            </label>
+        <div class="col-8">
+          <div id="testLs" value="">
+            <input type="radio" id="testL1" name="testL" value="Level 1" required > Level 1
+            <input type="radio" id="testL2" name="testL" value="Level 2"> Level 2
           </div>
         </div>
       </div>
+
+      <!-- Notes -->
       <div class="form-group">
         <label for="comment">Notes:</label>
         <textarea class="form-control note" rows="5" id="comment"></textarea>
@@ -792,6 +727,7 @@
     $(".h264Check").click(function () {
       if ($(this).is(":checked")) {
         $(".h264Check").val("Yes")
+        $(".urlH264Check").prop('required',true);
       } else {
         $(".h264Check").val("No")
       }
@@ -817,11 +753,18 @@
         $(".audioH264").val("")
       }
     });
+    $(".gH264").click(function () {
+      if ($(this).is(":checked")) {
+        $(".gH264").val("RTSP:   ")
+      } else {
+        $(".gH264").val("")
+      }
+    });
     $(".urlH264Check").click(function () {
       if ($(this).is(":checked")) {
-        $(".urlH264Check").val("RTSP:   ")
+        $(".urlH264Check").val()
       } else {
-        $(".urlH264Check").val("No")
+        $(".urlH264Check").val("")
       }
     });
 
@@ -829,6 +772,7 @@
     $(".h265Check").click(function () {
       if ($(this).is(":checked")) {
         $(".h265Check").val("Yes")
+        $(".urlH265Check").prop('required',true);
       } else {
         $(".h265Check").val("No")
       }
@@ -854,11 +798,18 @@
         $(".audioH265").val("")
       }
     });
-    $(".urlH265Check").click(function () {
+    $(".gH265").click(function () {
       if ($(this).is(":checked")) {
-        $(".urlH265Check").val("RTSP:   ")
+        $(".gH265").val("RTSP:   ")
       } else {
-        $(".urlH265Check").val("No")
+        $(".gH265").val("")
+      }
+    });
+    $(".urlH264Check").click(function () {
+      if ($(this).is(":checked")) {
+        $(".urlH265Check").val()
+      } else {
+        $(".urlH265Check").val("")
       }
     });
 
@@ -866,6 +817,7 @@
     $(".mjpegCheck").click(function () {
       if ($(this).is(":checked")) {
         $(".mjpegCheck").val("Yes")
+        $(".urlMJPEGCheck").prop('required',true);
       } else {
         $(".mjpegCheck").val("No")
       }
@@ -891,11 +843,18 @@
         $(".audioMJPEG").val("")
       }
     });
+    $(".gMJPEG").click(function () {
+      if ($(this).is(":checked")) {
+        $(".gMJPEG").val("RTSP:   ")
+      } else {
+        $(".gMJPEG").val("")
+      }
+    });
     $(".urlMJPEGCheck").click(function () {
       if ($(this).is(":checked")) {
-        $(".urlMJPEGCheck").val("RTSP:   ")
+        $(".urlMJPEGCheck").val()
       } else {
-        $(".urlMJPEGCheck").val("No")
+        $(".urlMJPEGCheck").val("")
       }
     });
 
@@ -903,6 +862,7 @@
     $(".mpeg4Check").click(function () {
       if ($(this).is(":checked")) {
         $(".mpeg4Check").val("Yes")
+        $(".urlMPEG4Check").prop('required',true);
       } else {
         $(".mpeg4Check").val("No")
       }
@@ -928,32 +888,174 @@
         $(".audioMPEG4").val("")
       }
     });
+    $(".gMPEG4").click(function () {
+      if ($(this).is(":checked")) {
+        $(".gMPEG4").val("RTSP:   ")
+      } else {
+        $(".gMPEG4").val("")
+      }
+    });
     $(".urlMPEG4Check").click(function () {
       if ($(this).is(":checked")) {
-        $(".urlMPEG4Check").val("RTSP:   ")
+        $(".urlMPEG4Check").val()
       } else {
-        $(".urlMPEG4Check").val("No")
+        $(".urlMPEG4Check").val("")
+      }
+    });
+
+    // FW Version 
+    $(".updated").click(function () {
+      if ($(this).is(":checked")) {
+        $(".updated").val("Updated")
+      } else {
+        $(".updated").val("")
       }
     });
 
     //Display PTZ
-    $(".cvYPTZ").on("click", () => {
-      $(".PTZ").css("display", "block");
+    $("#ptzCV").click(function () {
+      if ($(this).is(":checked")) {
+        $("#ptzs").val("CV supports PTZ")
+        $(".PTZ").css("display", "inline-block");
+      }
     });
-    $(".noPTZ").on("click", () => {
-      $(".PTZ").css("display", "none");
+    $("#ptzC").click(function () {
+      if ($(this).is(":checked")) {
+        $("#ptzs").val("Camera supports PTZ")
+        $(".PTZ").css("display", "none");
+      }
     });
-    $(".cYPTZ").on("click", () => {
-      $(".PTZ").css("display", "none");
+    $("#ptzCD").click(function () {
+      if ($(this).is(":checked")) {
+        $("#ptzs").val("Camera doesn't supports PTZ")
+        $(".PTZ").css("display", "none");
+      }
     });
+
 
     //PTZ driver list
     PtzDrivers.forEach((dType) => {
       $(".PtzList").append(`<option value="${dType}">${dType}</option>`)
-
-
     });
 
+    // PTZ supported
+      $('input[name=panTilt]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#panTilts').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#panTilts').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#panTilts').val('Not supported')
+        }
+        console.log( $('#panTilts').val());
+      });
+
+      $('input[name=zoom]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#zooms').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#zooms').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#zooms').val('Not supported')
+        }
+        console.log( $('#zooms').val());
+      });
+
+      $('input[name=iris]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#iriss').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#iriss').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#iriss').val('Not supported')
+        }
+        console.log( $('#iriss').val());
+      });
+      
+      $('input[name=focus]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#focuss').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#focuss').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#focuss').val('Not supported')
+        }
+        console.log( $('#focuss').val());
+      })
+            
+      $('input[name=aIRIS]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#aIRISs').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#aIRISs').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#aIRISs').val('Not supported')
+        }
+        console.log( $('#aIRISs').val());
+      })
+                  
+      $('input[name=aFocus]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#aFocuss').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#aFocuss').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#aFocuss').val('Not supported')
+        }
+        console.log( $('#aFocuss').val());
+      })
+                        
+      $('input[name=ptzSpped]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#ptzSppeds').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#ptzSppeds').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#ptzSppeds').val('Not supported')
+        }
+        console.log( $('#ptzSppeds').val());
+      })
+                              
+      $('input[name=presetSet]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#presetSets').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#presetSets').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#presetSets').val('Not supported')
+        }
+        console.log( $('#presetSets').val());
+      })
+                                    
+      $('input[name=presetShow]').click(function () {
+        console.log('Hey you clicked this: ' + this.value);
+
+        if (this.value == 'Pass') {
+          $('#presetShows').val('Pass')
+        } else if (this.value == 'Failed') {
+          $('#presetShows').val('Failed')
+        } else if (this.value == 'Not supported') {
+          $('#presetShows').val('Not supported')
+        }
+        console.log( $('#presetShows').val());
+      })
+     
     //Device type list
     deviceType.forEach((ptzD) => {
       $(".deviceType").append(`<option value="${ptzD}">${ptzD}</option>`)
@@ -969,14 +1071,37 @@
       $(".DewarpingP").append(`<option value="${lensT}">${lensT}</option>`)
     });
     //Dewarping
-    $(".cvYDew").on("click", () => {
-      $(".Dew").css("display", "inline-block");
+    $("#dewarpingCVP").on("click", () => {
+      $(".dew").css("display", "inline-block");
+      $("#dewarpings").val("CV supports dewarping ")
+      
     });
-    $(".cvNDew").on("click", () => {
-      $(".Dew").css("display", "none");
+    $("#dewarpingCVF").on("click", () => {
+      $(".dew").css("display", "none");
+      $("#dewarpings").val("CV doesn't supports dewarping");
     });
-    $(".cNDew").on("click", () => {
-      $(".Dew").css("display", "none");
+    $("#dewarpingCNS").on("click", () => {
+      $(".dew").css("display", "none");
+      $("#dewarpings").val("Camera doesn't supports dewarping");
+    });
+
+        //Events
+        $("#eventCVP").on("click", () => {
+          $("#events").val("CV supports dewarping ")
+        });
+        $("#eventCVF").on("click", () => {
+          $("#events").val("CV doesn't supports dewarping")
+        });
+        $("#eventCNS").on("click", () => {
+          $("#events").val("Camera doesn't supports dewarping")
+        });
+
+    // Test Level
+    $("#testL1").on("click", () => {
+      $("#testLs").val("Level 1")
+    });
+    $("#testL2").on("click", () => {
+      $("#testLs").val("Level 2")
     });
 
     // added focus function
@@ -1086,23 +1211,52 @@
       $(".vWer").val("Window  " + window.navigator.appVersion.split("NT")[1].split(";")[0].trim())
       console.log($(".vWer").val())
 
-      $(".panTilt").click(function () {
-        if ($(this).is(":checked")) {
-          let panTiltT = $("input[type='radio'][name='panTilt']:checked").val();
-          console.log("koko" + panTiltT)
-        } else {
-          console.log("koko22" + panTiltT)
+      // $(".panTilt").click(function () {
+      //   if ($(this).is(":checked")) {
+      //     let panTiltT = $("input[type='radio'][name='panTilt']:checked").val();
+      //     console.log("koko" + panTiltT)
+      //   } else {
+      //     console.log("koko22" + panTiltT)
 
-        }
-      });
+      //   }
+      // });
       
      
       // PDF
       $(".submitB").on("click", () => {
-        var doc = new jsPDF({
-          orientation: 'portrait',
+        let testerName = $(".testerName").val();
+        let cvVersion = $(".cvVersion").val();
+        let placeholder = $(".placeholder").val();
+        let manfu = $(".manfu").val();
+        let model = $(".model").val();
+        let ip1 = $(".ip1").val();
+        let ip2 = $(".ip2").val();
+        let ip3 = $(".ip3").val();
+        let ip4 = $(".ip4").val();
+        let mac1 = $(".mac1").val();
+        let mac2 = $(".mac2").val();
+        let mac3 = $(".mac3").val();
+        let mac4 = $(".mac4").val();
+        let mac5 = $(".mac5").val();
+        let chCount = $(".chCount ").val();
+        let streamId  = $(".streamId ").val();
+        let uName = $(".uName ").val();
+        let pWord  = $(".streamId ").val();
+        let fwVersion  = $(".fwVersion ").val();
+        let ptzs  = $("#ptzs ").val();
+        let dewarpings = $("#dewarpings").val();
+        let events = $("#events").val();
+        let testLs = $("#testLs").val();
 
-        });
+
+
+
+        if( testerName !== "" && cvVersion !== "" && placeholder !== "" && manfu !== "" && model !== "" && ip1 !== "" && ip2 !== "" && ip3 !== "" && ip4 !== "" && mac1 !== "" && mac2 !== "" && mac3 !== "" && mac4 !== "" && mac5 !== "" && chCount !== "" && streamId !== "" && uName !== "" && pWord !== "" && fwVersion !== "" && ptzs !== "" && dewarpings !== "" && events !== "" && testLs !== "")
+           {
+
+        var doc = new jsPDF({
+          orientation: 'portrait',});
+
         doc.ellipse(105, 25, 60, 15, 'S');
 
         doc.setTextColor(231, 77, 61);
@@ -1125,24 +1279,33 @@
         doc.text(30, 150, "MPEG4:  " + `${$(".mpeg4Check").val().trim()}` + "  TCP:  " + `${$(".tcpMPEG4").val().trim()}` + "  UDP:  " + `${$(".udpMPEG4").val().trim()}` + "  Driver:  " + `${$(".urlMPEG4Check").val().trim()}` + "  Audio:  " + `${$(".audioMPEG4").val().trim()}`);
         doc.text(10, 160, "Channel count:  " + `${$(".chCount").val().trim()}` + "Stream count:  " + `${$(".streamId").val().trim()}`);
         doc.text(10, 170, "User:  " + `${$(".uName").val().trim()}` + "Password:  " + `${$(".pWord").val().trim()}`);
-        doc.text(10, 180, "FW Version:  " + `${$(".fwVersion").val().trim()}`);
-        doc.text(10, 190, "PTZ Capable:  " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`));
-        doc.text(30, 200, "PTZ Driver Used:    " + `${$(".cvYPTZ").val().trim()}` + "PTZ ID Used:  " + `${$(".cvYPTZ").val().trim()}`);
-        doc.text(30, 210, "Pan/Tilt Buttons:    " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`) + "  Zoom In/Out Buttons:  " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`));
-        doc.text(30, 220, "Iris Buttons:    " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`) + "  Auto Iris:  " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`));
-        doc.text(30, 230, "Focus Buttons:    " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`) + "  Auto Focus:  " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`));
-        doc.text(30, 240, "Preset Position Set:    " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`) + "  Preset Position Show:  " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`));
-        doc.text(30, 250, "Preset Position Set:    " + (`${$(".cvYPTZ").val().trim()}` || `${$(".cYPTZ").val().trim()}` || `${$("cNPTZ").val().trim()}`));
+        doc.text(10, 180, "FW Version:  " + (`${$(".fwVersion").val().trim()}`) + "   " + (`${$(".updated").val().trim()}`));
+        doc.text(10, 190, "PTZ Capable:  " + (`${$("#ptzs").val().trim()}`));
+        doc.text(30, 200, "PTZ Driver Used:    " + `${$(".PtzList").val().trim()}` + "PTZ ID Used:  " + `${$(".ptzId").val().trim()}`);
+        doc.text(30, 210, "Pan/Tilt Buttons:    " + (`${$("#panTilts").val().trim()}`) + "  Zoom In/Out Buttons:  " + (`${$("#zooms").val().trim()}`));
+        doc.text(30, 220, "Iris Buttons:    " + (`${$("#iriss").val().trim()}`) + "  Auto Iris:  " + (`${$("#aIRISs").val().trim()}`));
+        doc.text(30, 230, "Focus Buttons:    " + (`${$("#focuss").val().trim()}`) + "  Auto Focus:  " + (`${$("#aFocuss").val().trim()}`));
+        doc.text(30, 240, "Preset Position Set:    " + (`${$("#presetSets").val().trim()}`) + "  Preset Position Show:  " + (`${$("#presetShows").val().trim()}`));
+        doc.text(30, 250, "PTZ Speed Adjust:    " + (`${$("#ptzSppeds").val().trim()}` ));
+        doc.text(10, 260, "Dewarping:  " + (`${$("#dewarpings").val().trim()}`));
+        doc.text(10, 270, "On-Camera events:  " + (`${$("#events").val().trim()}`));
+        doc.text(10, 280, "Testing Level:  " + (`${$("#testLs").val().trim()}`));
 
-        doc.text(10, 260, "Dewarping:  " + (`${$(".cvYDew").val().trim()}` || `${$(".cvNDew").val().trim()}` || `${$(".cNDew").val().trim()}`));
-        doc.text(10, 270, "On-Camera events:  ");
-        doc.text(10, 280, "Testing Level:  " + `${$(".testIn").val().trim()}` || `${$(".testOut").val().trim()}`);
-        doc.text(10, 290, "Notes:  " + `${$(".note").val().trim()}`);
+        doc.addPage();
+        doc.ellipse(105, 25, 60, 15, 'S');
 
+        doc.setTextColor(231, 77, 61);
+        doc.text(85, 20, 'Salient Systems');
+
+        doc.setTextColor(100);
+        doc.text(70, 30, 'Camera Certification Template');
+        doc.text(10, 50, "Notes:  " + `${$(".note").val().trim()}`);
+
+        doc.setTextColor(100);
         // Save the PDF
         doc.save('document.pdf');
-      })
-
+      }})
+      
     });
 
 
