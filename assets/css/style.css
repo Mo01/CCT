@@ -1,13 +1,14 @@
 *{
     margin-top: 5px;
+    
 }
 body{
-    background-color: lightgrey;
+    background-color: white;
     white-space: nowrap;
-    padding-left: 10px;
+    padding-left: 10px;   
 }
 .container{
-    background-color: lightcyan;
+    background-color: rgb(243, 237, 237);
 }
 .PTZ, .row{
     border: 1px black solid;

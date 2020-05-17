@@ -32,9 +32,12 @@
 </head>
 
 <body>
-  <div class="container">
-    <form>
-
+  <div class="text-center">
+    <h1 class="text-danger" >Salient Systems</h1>
+    <h3 class="text-secondary" >Camera Certification Template V2</h3class="text-secondary">
+  </div>
+  <div class="container" >
+    <form class="text-secondary">
       <!-- Name of tester -->
       <div class="row">
         <div class="col-2">
@@ -413,8 +416,8 @@
             <label >PTZ Driver Used
           </div>
           <div class="col-2">
-            <select class="ui search dropdown PtzList">
-              <option value="">PTZ Drivers list </option>
+            <select class="ui search dropdown ptzList ptzDriverValue"  value="None">
+              <option value="None">PTZ Drivers list </option>
             </select>
           </div>
         </div>
@@ -935,7 +938,7 @@
 
     //PTZ driver list
     PtzDrivers.forEach((dType) => {
-      $(".PtzList").append(`<option value="${dType}">${dType}</option>`)
+      $(".ptzList").append(`<option value="${dType}">${dType}</option>`)
     });
 
     // PTZ supported
@@ -1281,7 +1284,7 @@
         doc.text(10, 170, "User:  " + `${$(".uName").val().trim()}` + "Password:  " + `${$(".pWord").val().trim()}`);
         doc.text(10, 180, "FW Version:  " + (`${$(".fwVersion").val().trim()}`) + "   " + (`${$(".updated").val().trim()}`));
         doc.text(10, 190, "PTZ Capable:  " + (`${$("#ptzs").val().trim()}`));
-        doc.text(30, 200, "PTZ Driver Used:    " + `${$(".PtzList").val().trim()}` + "PTZ ID Used:  " + `${$(".ptzId").val().trim()}`);
+        doc.text(30, 200, "PTZ Driver Used:    " + `${$(".ptzDriverValue").val().trim()}` + "  PTZ ID Used:  " + `${$(".ptzId").val().trim()}`);
         doc.text(30, 210, "Pan/Tilt Buttons:    " + (`${$("#panTilts").val().trim()}`) + "  Zoom In/Out Buttons:  " + (`${$("#zooms").val().trim()}`));
         doc.text(30, 220, "Iris Buttons:    " + (`${$("#iriss").val().trim()}`) + "  Auto Iris:  " + (`${$("#aIRISs").val().trim()}`));
         doc.text(30, 230, "Focus Buttons:    " + (`${$("#focuss").val().trim()}`) + "  Auto Focus:  " + (`${$("#aFocuss").val().trim()}`));
