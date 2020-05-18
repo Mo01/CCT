@@ -40,8 +40,17 @@ $(function () {
       if ($(this).is(":checked")) {
         $(".h264Check").val("Yes")
         $(".urlH264Check").prop('required', true);
+        $(".tcpH264").removeAttr("disabled");
+        $(".udpH264").removeAttr("disabled");
+        $(".audioH264").removeAttr("disabled");
+        $(".gH264").removeAttr("disabled");
       } else {
         $(".h264Check").val("No")
+        $(".tcpH264").attr("disabled", "disabled");
+        $(".udpH264").attr("disabled", "disabled");
+        $(".audioH264").attr("disabled", "disabled");
+        $(".gH264").attr("disabled", "disabled");
+
       }
     });
     $(".tcpH264").click(function () {
@@ -85,8 +94,16 @@ $(function () {
       if ($(this).is(":checked")) {
         $(".h265Check").val("Yes")
         $(".urlH265Check").prop('required', true);
+        $(".tcpH265").removeAttr("disabled");
+        $(".udpH265").removeAttr("disabled");
+        $(".audioH265").removeAttr("disabled");
+        $(".gH265").removeAttr("disabled");
       } else {
         $(".h265Check").val("No")
+        $(".tcpH265").attr("disabled", "disabled");
+        $(".udpH265").attr("disabled", "disabled");
+        $(".audioH265").attr("disabled", "disabled");
+        $(".gH265").attr("disabled", "disabled");
       }
     });
     $(".tcpH265").click(function () {
@@ -130,8 +147,16 @@ $(function () {
       if ($(this).is(":checked")) {
         $(".mjpegCheck").val("Yes")
         $(".urlMJPEGCheck").prop('required', true);
+        $(".tcpMJPEG").removeAttr("disabled");
+        $(".udpMJPEG").removeAttr("disabled");
+        $(".audioMJPEG").removeAttr("disabled");
+        $(".gMJPEG").removeAttr("disabled");
       } else {
         $(".mjpegCheck").val("No")
+        $(".tcpMJPEG").attr("disabled", "disabled");
+        $(".udpMJPEG").attr("disabled", "disabled");
+        $(".audioMJPEG").attr("disabled", "disabled");
+        $(".gMJPEG").attr("disabled", "disabled");
       }
     });
     $(".tcpMJPEG").click(function () {
@@ -175,8 +200,16 @@ $(function () {
       if ($(this).is(":checked")) {
         $(".mpeg4Check").val("Yes")
         $(".urlMPEG4Check").prop('required', true);
+        $(".tcpMPEG4").removeAttr("disabled");
+        $(".udpMPEG4").removeAttr("disabled");
+        $(".audioMPEG4").removeAttr("disabled");
+        $(".gMPEG4").removeAttr("disabled");
       } else {
         $(".mpeg4Check").val("No")
+        $(".tcpMPEG4").attr("disabled", "disabled");
+        $(".udpMPEG4").attr("disabled", "disabled");
+        $(".audioMPEG4").attr("disabled", "disabled");
+        $(".gMPEG4").attr("disabled", "disabled");
       }
     });
     $(".tcpMPEG4").click(function () {
