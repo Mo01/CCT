@@ -239,7 +239,7 @@ $(function () {
     });
     $("#ptzCD").click(function () {
       if ($(this).is(":checked")) {
-        $("#ptzs").val("Camera doesn't supports PTZ")
+        $("#ptzs").val("Camera doesn't support PTZ")
         $(".PTZ").css("display", "none");
       }
     });
@@ -370,11 +370,11 @@ $(function () {
     });
     $("#dewarpingCVF").on("click", () => {
       $(".dew").css("display", "none");
-      $("#dewarpings").val("CV doesn't supports dewarping");
+      $("#dewarpings").val("CV doesn't support dewarping");
     });
     $("#dewarpingCNS").on("click", () => {
       $(".dew").css("display", "none");
-      $("#dewarpings").val("Camera doesn't supports dewarping");
+      $("#dewarpings").val("Camera doesn't support dewarping");
     });
 
     //Events
@@ -382,10 +382,10 @@ $(function () {
       $("#events").val("CV supports dewarping ")
     });
     $("#eventCVF").on("click", () => {
-      $("#events").val("CV doesn't supports dewarping")
+      $("#events").val("CV doesn't support dewarping")
     });
     $("#eventCNS").on("click", () => {
-      $("#events").val("Camera doesn't supports dewarping")
+      $("#events").val("Camera doesn't support dewarping")
     });
 
     // Test Level
@@ -506,7 +506,7 @@ $(function () {
 
         }
       });
-      $(".vWer").val("Window  " + window.navigator.appVersion.split("NT")[1].split(";")[0].trim())
+      $(".vWer").val("Windows  " + window.navigator.appVersion.split("NT")[1].split(";")[0].trim())
       console.log($(".vWer").val())
 
 
