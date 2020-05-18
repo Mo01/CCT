@@ -594,7 +594,7 @@ $(function () {
           doc.text(10, 50, "Tester:  " + `${$(".testerName").val().trim()}`);
           doc.text(10, 60, "CV Version:  " + `${$(".cvVersion").val().trim()}`);
           doc.text(10, 70, "Windows Version:  " + `${$(".vWer").val().trim()}`);
-          doc.text(10, 80, "Manfacturer:  " + `${$(".manfu").val().trim()}` + "                    " + "   " + "Model  :" + `${$(".model").val().trim()}`);
+          doc.text(10, 80, "Manufacturer:  " + `${$(".manfu").val().trim()}` + "                    " + "   " + "Model  :" + `${$(".model").val().trim()}`);
           doc.text(10, 90, "Camera's IP:  " + `${$(".ip1").val().trim()}` + "." + `${$(".ip2").val().trim()}` + "." + `${$(".ip3").val().trim()}` + "." + `${$(".ip4").val().trim()}` + "      " + "Mac Address:  " + `${$(".mac1").val().trim()}` + ":" + `${$(".mac2").val().trim()}` + ":" + `${$(".mac3").val().trim()}` + ":" + `${$(".mac4").val().trim()}` + ":" + `${$(".mac5").val().trim()}`);
           doc.text(10, 100, "Device Type:  " + (`${$(".deviceTypeCheck").val().trim()}` || `${$(".newTypeCheck").val().trim()}`));
           doc.text(10, 110, "Compressions:  ");
