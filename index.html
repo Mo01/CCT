@@ -21,16 +21,6 @@
   <link rel="shortcut icon"
     href="https://www.salientsys.com/assets/uploads/images/logos/_192x192_crop_center-center_100_none/apple-icon.png" />
   <script src="assets/javascript/app.js"></script>
-  <!-- CSS -->
-  <style>
-    .PTZ {
-      display: none;
-    }
-
-    .Dew {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -200,7 +190,7 @@
             <!-- Generic -->
             <div class="col-2">
               <div class="form-check form-check-inline ">
-                <input type="checkbox" class="form-check-input gH264" value="No" disabled="disabled" id="materialInline2">
+                <input type="checkbox" class="form-check-input gH264" value="" disabled="disabled" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">Generic</label>
               </div>
             </div>
@@ -243,7 +233,7 @@
             <!-- Generic -->
             <div class="col-2">
               <div class="form-check form-check-inline ">
-                <input type="checkbox" class="form-check-input gH265" value="No"  disabled="disabled" id="materialInline2">
+                <input type="checkbox" class="form-check-input gH265" value=""  disabled="disabled" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">Generic</label>
               </div>
             </div>
@@ -285,7 +275,7 @@
             <!-- Generic -->
             <div class="col-2">
               <div class="form-check form-check-inline ">
-                <input type="checkbox" class="form-check-input gMJPEG" value="No" disabled="disabled" id="materialInline2">
+                <input type="checkbox" class="form-check-input gMJPEG" value="" disabled="disabled" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">Generic</label>
               </div>
             </div>
@@ -327,7 +317,7 @@
             <!-- Generic -->
             <div class="col-2">
               <div class="form-check form-check-inline ">
-                <input type="checkbox" class="form-check-input gMPEG4" value="No" disabled="disabled" id="materialInline2">
+                <input type="checkbox" class="form-check-input gMPEG4" value="" disabled="disabled" id="materialInline2">
                 <label class="form-check-label " for="materialInline2">Generic</label>
               </div>
             </div>
@@ -421,8 +411,8 @@
             <label>PTZ Driver Used
           </div>
           <div class="col-2">
-            <select class="ui search dropdown ptzList ptzDriverValue" value="None">
-              <option value="None">PTZ Drivers list </option>
+            <select class="ui search dropdown ptzList ptzDriverValue" value="">
+              <option value="">PTZ Drivers list </option>
             </select>
           </div>
         </div>
@@ -450,7 +440,7 @@
             <label>Pan/Tilt Buttons
           </div>
           <div class="col-4">
-            <div id="panTilts" value="None">
+            <div id="panTilts" value="">
               <input type="radio" id="panTiltP" name="panTilt" value="Pass"> Pass
               <input type="radio" id="panTiltF" name="panTilt" value="Failed"> Failed
               <input type="radio" id="panTiltNS" name="panTilt" value="Not supported"> Not supported
@@ -467,7 +457,7 @@
             <label>Zoom In/Out Buttons
           </div>
           <div class="col-4">
-            <div id="zooms" value="None">
+            <div id="zooms" value="">
               <input type="radio" id="zoomP" name="zoom" value="Pass"> Pass
               <input type="radio" id="zoomF" name="zoom" value="Failed"> Failed
               <input type="radio" id="zoomNS" name="zoom" value="Not supported"> Not supported
@@ -502,7 +492,7 @@
           <div class="col-4">
             <label>Focus Buttons
           </div>
-          <div class="col-4" value="None">
+          <div class="col-4" value="">
             <div id="focuss">
               <input type="radio" id="focusP" name="focus" value="Pass"> Pass
               <input type="radio" id="focusF" name="focus" value="Failed"> Failed
@@ -538,7 +528,7 @@
             <label>Auto Focus
           </div>
           <div class="col-4">
-            <div id="aFocuss" value="None">
+            <div id="aFocuss" value="">
               <input type="radio" id="aFocusP" name="aFocus" value="Pass"> Pass
               <input type="radio" id="aFocusF" name="aFocus" value="Failed"> Failed
               <input type="radio" id="aFocusNS" name="aFocus" value="Not supported"> Not supported
@@ -557,7 +547,7 @@
             <label>PTZ Speed Adjust
           </div>
           <div class="col-4">
-            <div id="ptzSppeds" value="None">
+            <div id="ptzSppeds" value="">
               <input type="radio" id="ptzSppedP" name="ptzSpped" value="Pass"> Pass
               <input type="radio" id="ptzSppedF" name="ptzSpped" value="Failed"> Failed
               <input type="radio" id="ptzSppedNS" name="ptzSpped" value="Not supported"> Not supported
@@ -575,7 +565,7 @@
             <label>Preset Position Set
           </div>
           <div class="col-4">
-            <div id="presetSets" value="None">
+            <div id="presetSets" value="">
               <input type="radio" id="presetSetP" name="presetSet" value="Pass"> Pass
               <input type="radio" id="presetSetF" name="presetSet" value="Failed"> Failed
               <input type="radio" id="presetSetNS" name="presetSet" value="Not supported"> Not supported
@@ -593,7 +583,7 @@
             <label>Preset Position Show
           </div>
           <div class="col-4">
-            <div id="presetShows" value="None">
+            <div id="presetShows" value="">
               <input type="radio" id="presetShowP" name="presetShow" value="Pass"> Pass
               <input type="radio" id="presetShowF" name="presetShow" value="Failed"> Failed
               <input type="radio" id="presetShowNS" name="presetShow" value="Not supported"> Not supported
@@ -651,9 +641,9 @@
         <div class="col-8">
           <div id="events" value="">
             <input type="radio" id="eventCVP" name="event" value="CV supports events" required> CV supports events
-            <input type="radio" id="eventCVF" name="event" value="CV doesn't support dewarping"> CV doesn't support
+            <input type="radio" id="eventCVF" name="event" value="CV doesn't support events"> CV doesn't support
             event
-            <input type="radio" id="eventCNS" name="event" value="Camera doesn't support dewarping"> CV doesn't support events
+            <input type="radio" id="eventCNS" name="event" value="Camera doesn't support events"> CV doesn't support events
           </div>
         </div>
       </div>

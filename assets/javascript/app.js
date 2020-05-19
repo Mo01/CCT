@@ -124,7 +124,7 @@ $(function () {
       if ($(this).is(":checked")) {
         $(".audioH265").val("Yes")
       } else {
-        $(".audioH265").val("")
+        $(".audioH265").val("No")
       }
     });
     $(".gH265").click(function () {
@@ -177,7 +177,7 @@ $(function () {
       if ($(this).is(":checked")) {
         $(".audioMJPEG").val("Yes")
       } else {
-        $(".audioMJPEG").val("")
+        $(".audioMJPEG").val("No")
       }
     });
     $(".gMJPEG").click(function () {
@@ -412,13 +412,13 @@ $(function () {
 
     //Events
     $("#eventCVP").on("click", () => {
-      $("#events").val("CV supports dewarping ")
+      $("#events").val("CV supports events")
     });
     $("#eventCVF").on("click", () => {
-      $("#events").val("CV doesn't support dewarping")
+      $("#events").val("CV doesn't support events")
     });
     $("#eventCNS").on("click", () => {
-      $("#events").val("Camera doesn't support dewarping")
+      $("#events").val("Camera doesn't support events")
     });
 
     // Test Level
@@ -500,9 +500,10 @@ $(function () {
         if ($(this).is(":checked")) {
           $(".urlH264Check").removeAttr("disabled");
           $(".urlH264Check").focus();
+          $(".h264Check").val("Yes");
         } else {
           $(".urlH264Check").attr("disabled", "disabled");
-
+          $(".h264Check").val("");
         }
       });
 
@@ -511,12 +512,9 @@ $(function () {
           $(".urlH265Check").removeAttr("disabled");
           $(".urlH265Check").focus();
           $(".h265Check").val("Yes");
-
-          console.log(" val", $(".h265Check").val())
         } else {
           $(".urlH265Check").attr("disabled", "disabled");
-          $(".h265Check").val("No");
-          console.log(" val", $(".h265Check").val())
+          $(".h265Check").val("");
         }
       });
 
@@ -524,9 +522,10 @@ $(function () {
         if ($(this).is(":checked")) {
           $(".urlMJPEGCheck").removeAttr("disabled");
           $(".urlMJPEGCheck").focus();
+          $(".mjpegCheck").val("Yes");
         } else {
           $(".urlMJPEGCheck").attr("disabled", "disabled");
-
+          $(".mjpegCheck").val("");
         }
       });
 
@@ -534,8 +533,10 @@ $(function () {
         if ($(this).is(":checked")) {
           $(".urlMPEG4Check").removeAttr("disabled");
           $(".urlMPEG4Check").focus();
+          $(".mpeg4Check").val("Yes");
         } else {
           $(".urlMPEG4Check").attr("disabled", "disabled");
+          $(".mpeg4Check").val("");
 
         }
       });
@@ -591,30 +592,213 @@ $(function () {
           doc.text(65, 30, 'Camera Certification Template');
 
           doc.setTextColor(100);
-          doc.text(10, 50, "Tester:  " + `${$(".testerName").val().trim()}`);
-          doc.text(10, 60, "CV Version:  " + `${$(".cvVersion").val().trim()}`);
-          doc.text(10, 70, "Windows Version:  " + `${$(".vWer").val().trim()}`);
-          doc.text(10, 80, "Manufacturer:  " + `${$(".manfu").val().trim()}` + "                    " + "   " + "Model  :" + `${$(".model").val().trim()}`);
-          doc.text(10, 90, "Camera's IP:  " + `${$(".ip1").val().trim()}` + "." + `${$(".ip2").val().trim()}` + "." + `${$(".ip3").val().trim()}` + "." + `${$(".ip4").val().trim()}` + "      " + "Mac Address:  " + `${$(".mac1").val().trim()}` + ":" + `${$(".mac2").val().trim()}` + ":" + `${$(".mac3").val().trim()}` + ":" + `${$(".mac4").val().trim()}` + ":" + `${$(".mac5").val().trim()}`);
-          doc.text(10, 100, "Device Type:  " + (`${$(".deviceTypeCheck").val().trim()}` || `${$(".newTypeCheck").val().trim()}`));
+          doc.text(10, 50, "Tester: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(30, 50,` ${$(".testerName").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(10, 60, "CV Version: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(45, 60,` ${$(".cvVersion").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(10, 70, "Windows Version: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(60, 70,`${$(".vWer").val().trim()}`);   
+         
+          doc.setTextColor(100);
+          doc.text(10, 80, "Manufacturer: " );
+          doc.setTextColor(0, 0, 0);
+          doc.text(50, 80,  ` ${$(".manfu").val().trim()}` );
+
+          doc.setTextColor(100);
+          doc.text(80, 80, "Model :");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 80, ` ${$(".model").val().trim()}`);
+          
+          doc.setTextColor(100);
+          doc.text(10, 90, "Camera's IP: " );
+          doc.setTextColor(0, 0, 0);
+          doc.text(50, 90, `${$(".ip1").val().trim()}` + "." );
+          doc.text(62, 90, `${$(".ip2").val().trim()}` + "." );
+          doc.text(74, 90, `${$(".ip3").val().trim()}` + "." );
+          doc.text(86, 90, `${$(".ip4").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(100, 90, "Mac Address: " );
+          doc.setTextColor(0, 0, 0);
+          doc.text(140, 90, `${$(".mac1").val().trim()}` + ":");
+          doc.text(148, 90, `${$(".mac2").val().trim()}` + ":");
+          doc.text(156, 90, `${$(".mac3").val().trim()}` + ":");
+          doc.text(164, 90, `${$(".mac4").val().trim()}` + ":");
+          doc.text(172, 90, `${$(".mac5").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(10, 100, "Device Type: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(50, 100, (` ${$(".deviceTypeCheck").val().trim()}` || ` ${$(".newTypeCheck").val().trim()}`));
+         
+          doc.setTextColor(100);
           doc.text(10, 110, "Compressions:  ");
-          doc.text(30, 120, "H264:  " + `${$(".h264Check").val().trim()}` + "     TCP:  " + `${$(".tcpH264").val().trim()}` + "  UDP:  " + `${$(".udpH264").val().trim()}` + "  Audio:  " + `${$(".audioH264").val().trim()}`);
-          doc.text(30, 130,  "Driver:  " + `${$(".gH264").val().trim()}` + `${$(".urlH264Check").val().trim()}`);
-          doc.text(30, 140, "H265:  " + `${$(".h265Check").val().trim()}` + "     TCP:  " + `${$(".tcpH265").val().trim()}` + "  UDP:  " + `${$(".udpH265").val().trim()}` + "  Audio:  " + `${$(".audioH265").val().trim()}`);
-          doc.text(30, 150,  "Driver:  " + `${$(".gH265").val().trim()}` + `${$(".urlH265Check").val().trim()}`);
-          doc.text(30, 160, "MJPEG:  " + `${$(".mjpegCheck").val().trim()}` + "  TCP:  " + `${$(".tcpMJPEG").val().trim()}` + "  UDP:  " + `${$(".udpMJPEG").val().trim()}` + "  Audio:  " + `${$(".audioMJPEG").val().trim()}`);
-          doc.text(30, 170,  "Driver:  " + `${$(".gMJPEG").val().trim()}` + `${$(".urlMJPEGCheck").val().trim()}`);
-          doc.text(30, 180, "MPEG4:  " + `${$(".mpeg4Check").val().trim()}` + "  TCP:  " + `${$(".tcpMPEG4").val().trim()}` + "  UDP:  " + `${$(".udpMPEG4").val().trim()}` + "  Audio:  " + `${$(".audioMPEG4").val().trim()}`);
-          doc.text(30, 190,  "Driver:  " + `${$(".gMPEG4").val().trim()}` + `${$(".urlMPEG4Check").val().trim()}`);
-          doc.text(10, 200, "Channel count:  " + `${$(".chCount").val().trim()}` + "   " + "Stream count:  " + `${$(".streamId").val().trim()}`);
-          doc.text(10, 210, "User:  " + `${$(".uName").val().trim()}` + "   " + "Password:  " + `${$(".pWord").val().trim()}`);
-          doc.text(10, 220, "PTZ Capable:  " + (`${$("#ptzs").val().trim()}`));
-          doc.text(30, 230, "PTZ Driver Used:    " + `${$(".ptzDriverValue").val().trim()}` + "               " + "PTZ ID Used:  " + `${$(".ptzId").val().trim()}`);
-          doc.text(30, 240, "Pan/Tilt Buttons:    " + (`${$("#panTilts").val().trim()}`) + "           " + "Zoom In/Out Buttons:  " + (`${$("#zooms").val().trim()}`));
-          doc.text(30, 250, "Iris Buttons:    " + (`${$("#iriss").val().trim()}`) + "                  " + "Auto Iris:  " + (`${$("#aIRISs").val().trim()}`));
-          doc.text(30, 260, "Focus Buttons:    " + (`${$("#focuss").val().trim()}`) + "             " + "Auto Focus:  " + (`${$("#aFocuss").val().trim()}`));
-          doc.text(30, 270, "Preset Position Set:    " + (`${$("#presetSets").val().trim()}`) + "          " + "  Preset Position Show:  " + (`${$("#presetShows").val().trim()}`));
-          doc.text(30, 280, "PTZ Speed Adjust:    " + (`${$("#ptzSppeds").val().trim()}`));
+          
+          doc.setTextColor(100);
+          doc.text(20, 120, "H264: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 120, ` ${$(".h264Check").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(55, 120, "TCP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 120, ` ${$(".tcpH264").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(85, 120, "UDP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 120, ` ${$(".udpH264").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(115, 120, "Audio: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(130, 120, ` ${$(".audioH264").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(20, 130,  "Driver:  ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 130, `  ${$(".gH264").val().trim()}` + `  ${$(".urlH264Check").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(20, 140, "H265: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 140, ` ${$(".h265Check").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(55, 140, "TCP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 140, ` ${$(".tcpH265").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(85, 140, "UDP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 140, ` ${$(".udpH265").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(115, 140, "Audio: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(130, 140, `${$(".audioH265").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(20, 150,  "Driver:  ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 150, `  ${$(".gH265").val().trim()}` + `  ${$(".urlH265Check").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(20, 160, "MJPEG: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 160, ` ${$(".mjpegCheck").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(55, 160, "TCP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 160, ` ${$(".tcpMJPEG").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(85, 160, "UDP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 160, ` ${$(".udpMJPEG").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(115, 160, "Audio: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(130, 160, ` ${$(".audioMJPEG").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(20, 170,  "Driver:  ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 170, `  ${$(".gMJPEG").val().trim()}` + `  ${$(".urlMJPEGCheck").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(20, 180, "MPEG4: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 180, ` ${$(".mpeg4Check").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(55, 180, "TCP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 180, ` ${$(".tcpMPEG4").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(85, 180, "UDP: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 180, ` ${$(".udpMPEG4").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(115, 180, "Audio: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(130, 180, ` ${$(".audioMPEG4").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(20, 190,  "Driver:  ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 190, `  ${$(".gMPEG4").val().trim()}` + `  ${$(".urlMPEG4Check").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(10, 200, "Channel count: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(60, 200, `${$(".chCount").val().trim()}`);
+          doc.setTextColor(100)
+          doc.text(90, 200, "Stream count: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(140, 200, `${$(".streamId").val().trim()}`);
+          
+          doc.setTextColor(100);
+          doc.text(10, 210, "User: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(30, 210, `${$(".uName").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(70, 210, "Password: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 210, `${$(".pWord").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(10, 220, "PTZ Capable: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(50, 220, `${$("#ptzs").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(15, 230, "PTZ Driver Used: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(60, 230, `${$(".ptzDriverValue").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(135, 230, "PTZ ID Used: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(170, 230, `${$(".ptzId").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(15, 240, "Pan/Tilt Buttons: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 240, `${$("#panTilts").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(110, 240, "Zoom In/Out Buttons: " );
+          doc.setTextColor(0, 0, 0);
+          doc.text(165, 240, `${$("#zooms").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(15, 250, "Iris Buttons: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 250, `${$("#iriss").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(110, 250, "Auto Iris: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(165, 250, `${$("#aIRISs").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(15, 260, "Focus Buttons: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 260, `${$("#focuss").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(110, 260, "Auto Focus: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(165, 260, `${$("#aFocuss").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(15, 270, "Preset Position Set: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(70, 270, `${$("#presetSets").val().trim()}`);
+          doc.setTextColor(100);
+          doc.text(110, 270, "Preset Position Show:  ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(165, 270, `${$("#presetShows").val().trim()}`);
+
+
+          doc.setTextColor(100);
+          doc.text(15, 280, "PTZ Speed Adjust: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(75, 280, `${$("#ptzSppeds").val().trim()}`);
+
 
 
           doc.addPage();
@@ -629,14 +813,40 @@ $(function () {
 
           doc.setTextColor(100);
           doc.text(65, 30, 'Camera Certification Template');
-          doc.text(10, 50, "FW Version:  " + (`${$(".fwVersion").val().trim()}`) + "   " + (`${$(".updated").val().trim()}`));
-          doc.text(10, 60, "Dewarping:  " + (`${$("#dewarpings").val().trim()}`));
-          doc.text(30, 70, "Dewarping Driver:  " + (`${$(".dewarpingT").val().trim()}`) +"  " + (`${$(".dewarpingP").val().trim()}`));
-          doc.text(10, 80, "On-Camera events:  " + (`${$("#events").val().trim()}`));
-          doc.text(10, 90, "Testing Level:  " + (`${$("#testLs").val().trim()}`));
-          doc.text(10, 100, "Notes:  " + `${$(".note").val().trim()}`);
+          
+          doc.setTextColor(100);
+          doc.text(10, 50, "FW Version: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 50, `${$(".fwVersion").val().trim()}`);
+          doc.text(70, 50, `${$(".updated").val().trim()}`);
 
           doc.setTextColor(100);
+          doc.text(10, 60, "Dewarping: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(40, 60, `${$("#dewarpings").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(50, 70, "Dewarping Driver: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(100, 70, `${$(".dewarpingT").val().trim()}`);
+          doc.text(140, 70, `${$(".dewarpingP").val().trim()}`);
+
+          
+          doc.setTextColor(100);
+          doc.text(10, 80, "On-Camera events: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(65, 80, `${$("#events").val().trim()}`);
+
+          doc.setTextColor(100);
+          doc.text(10, 90, "Testing Level: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(50, 90, `${$("#testLs").val().trim()}`);
+          
+          doc.setTextColor(100);
+          doc.text(10, 100, "Notes: ");
+          doc.setTextColor(0, 0, 0);
+          doc.text(20, 120, `${$(".note").val().trim()}`);
+
           // Save the PDF
           doc.save(`${$(".manfu").val().trim()}` + "_" + `${$(".model").val().trim()}` + ".pdf");
         }
