@@ -76,7 +76,7 @@ $(function () {
     });
     $(".gH264").click(function () {
       if ($(this).is(":checked")) {
-        $(".gH264").val("RTSP:   ")
+        $(".gH264").val("RTSP/")
       } else {
         $(".gH264").val("")
       }
@@ -129,7 +129,7 @@ $(function () {
     });
     $(".gH265").click(function () {
       if ($(this).is(":checked")) {
-        $(".gH265").val("RTSP:   ")
+        $(".gH265").val("RTSP/")
       } else {
         $(".gH265").val("")
       }
@@ -182,7 +182,7 @@ $(function () {
     });
     $(".gMJPEG").click(function () {
       if ($(this).is(":checked")) {
-        $(".gMJPEG").val("RTSP:   ")
+        $(".gMJPEG").val("RTSP/")
       } else {
         $(".gMJPEG").val("")
       }
@@ -235,7 +235,7 @@ $(function () {
     });
     $(".gMPEG4").click(function () {
       if ($(this).is(":checked")) {
-        $(".gMPEG4").val("RTSP:   ")
+        $(".gMPEG4").val("RTSP/")
       } else {
         $(".gMPEG4").val("")
       }
@@ -580,52 +580,67 @@ $(function () {
             orientation: 'portrait',
           });
           doc.rect(5, 5, 200, 290);
+          doc.setFont("times");
           doc.text(170, 10, `${dateString}`);
           doc.ellipse(100, 25, 50, 13, 'S');
 
-
+          doc.setFontType("bold");
           doc.setTextColor(231, 77, 61);
           doc.text(80, 20, 'Salient Systems');
 
-
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(65, 30, 'Camera Certification Template');
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 50, "Tester: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(30, 50,` ${$(".testerName").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 60, "CV Version: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(45, 60,` ${$(".cvVersion").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 70, "Windows Version: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(60, 70,`${$(".vWer").val().trim()}`);   
          
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 80, "Manufacturer: " );
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(50, 80,  ` ${$(".manfu").val().trim()}` );
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(80, 80, "Model :");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(100, 80, ` ${$(".model").val().trim()}`);
           
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 90, "Camera's IP: " );
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(50, 90, `${$(".ip1").val().trim()}` + "." );
           doc.text(62, 90, `${$(".ip2").val().trim()}` + "." );
           doc.text(74, 90, `${$(".ip3").val().trim()}` + "." );
           doc.text(86, 90, `${$(".ip4").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(100, 90, "Mac Address: " );
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(140, 90, `${$(".mac1").val().trim()}` + ":");
           doc.text(148, 90, `${$(".mac2").val().trim()}` + ":");
@@ -633,219 +648,306 @@ $(function () {
           doc.text(164, 90, `${$(".mac4").val().trim()}` + ":");
           doc.text(172, 90, `${$(".mac5").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 100, "Device Type: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(50, 100, (` ${$(".deviceTypeCheck").val().trim()}` || ` ${$(".newTypeCheck").val().trim()}`));
          
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 110, "Compressions:  ");
           
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(20, 120, "H264: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(40, 120, ` ${$(".h264Check").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(55, 120, "TCP: ");
+          doc.setFontType("bold");
+          doc.text(55, 120,  `${$(".gH264").val().trim()}` + "TCP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(70, 120, ` ${$(".tcpH264").val().trim()}`);
+          doc.text(85, 120, ` ${$(".tcpH264").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(85, 120, "UDP: ");
+          doc.setFontType("bold");
+          doc.text(100, 120,  `${$(".gH264").val().trim()}` + "UDP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(100, 120, ` ${$(".udpH264").val().trim()}`);
+          doc.text(135, 120, ` ${$(".udpH264").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(115, 120, "Audio: ");
+          doc.setFontType("bold");
+          doc.text(150, 120, "Audio: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(130, 120, ` ${$(".audioH264").val().trim()}`);
+          doc.text(170, 120, ` ${$(".audioH264").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(20, 130,  "Driver:  ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(40, 130, `  ${$(".gH264").val().trim()}` + `  ${$(".urlH264Check").val().trim()}`);
+          doc.text(40, 130, `${$(".urlH264Check").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(20, 140, "H265: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(40, 140, ` ${$(".h265Check").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(55, 140, "TCP: ");
+          doc.setFontType("bold");
+          doc.text(55, 140,`${$(".gH265").val().trim()}` + "TCP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(70, 140, ` ${$(".tcpH265").val().trim()}`);
+          doc.text(85, 140, ` ${$(".tcpH265").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(85, 140, "UDP: ");
+          doc.setFontType("bold");
+          doc.text(100, 140,`${$(".gH265").val().trim()}` + "UDP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(100, 140, ` ${$(".udpH265").val().trim()}`);
+          doc.text(135, 140, ` ${$(".udpH265").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(115, 140, "Audio: ");
+          doc.setFontType("bold");
+          doc.text(150, 140, "Audio: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(130, 140, `${$(".audioH265").val().trim()}`);
+          doc.text(170, 140, `${$(".audioH265").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(20, 150,  "Driver:  ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(40, 150, `  ${$(".gH265").val().trim()}` + `  ${$(".urlH265Check").val().trim()}`);
+          doc.text(40, 150,  `${$(".urlH265Check").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(20, 160, "MJPEG: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(40, 160, ` ${$(".mjpegCheck").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(55, 160, "TCP: ");
+          doc.setFontType("bold");
+          doc.text(55, 160, `  ${$(".gMJPEG").val().trim()}` +  "TCP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(70, 160, ` ${$(".tcpMJPEG").val().trim()}`);
+          doc.text(85, 160, ` ${$(".tcpMJPEG").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(85, 160, "UDP: ");
+          doc.setFontType("bold");
+          doc.text(100, 160, `${$(".gMJPEG").val().trim()}` +  "UDP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(100, 160, ` ${$(".udpMJPEG").val().trim()}`);
+          doc.text(135, 160, ` ${$(".udpMJPEG").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(115, 160, "Audio: ");
+          doc.setFontType("bold");
+          doc.text(150, 160, "Audio: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(130, 160, ` ${$(".audioMJPEG").val().trim()}`);
+          doc.text(170, 160, ` ${$(".audioMJPEG").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(20, 170,  "Driver:  ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(40, 170, `  ${$(".gMJPEG").val().trim()}` + `  ${$(".urlMJPEGCheck").val().trim()}`);
+          doc.text(40, 170, `${$(".urlMJPEGCheck").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(20, 180, "MPEG4: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(40, 180, ` ${$(".mpeg4Check").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(55, 180, "TCP: ");
+          doc.setFontType("bold");
+          doc.text(55, 180,`${$(".gMPEG4").val().trim()}` +  "TCP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(70, 180, ` ${$(".tcpMPEG4").val().trim()}`);
+          doc.text(85, 180, ` ${$(".tcpMPEG4").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(85, 180, "UDP: ");
+          doc.setFontType("bold");
+          doc.text(100, 180, `${$(".gMPEG4").val().trim()}` +  "UDP: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(100, 180, ` ${$(".udpMPEG4").val().trim()}`);
+          doc.text(135, 180, ` ${$(".udpMPEG4").val().trim()}`);
           doc.setTextColor(100);
-          doc.text(115, 180, "Audio: ");
+          doc.setFontType("bold");
+          doc.text(150, 180, "Audio: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(130, 180, ` ${$(".audioMPEG4").val().trim()}`);
+          doc.text(170, 180, ` ${$(".audioMPEG4").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(20, 190,  "Driver:  ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(40, 190, `  ${$(".gMPEG4").val().trim()}` + `  ${$(".urlMPEG4Check").val().trim()}`);
+          doc.text(40, 190, `${$(".urlMPEG4Check").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 200, "Channel count: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(60, 200, `${$(".chCount").val().trim()}`);
           doc.setTextColor(100)
+          doc.setFontType("bold");
           doc.text(90, 200, "Stream count: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(140, 200, `${$(".streamId").val().trim()}`);
           
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 210, "User: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(30, 210, `${$(".uName").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(70, 210, "Password: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(100, 210, `${$(".pWord").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 220, "PTZ Capable: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(50, 220, `${$("#ptzs").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(15, 230, "PTZ Driver Used: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(60, 230, `${$(".ptzDriverValue").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(135, 230, "PTZ ID Used: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(170, 230, `${$(".ptzId").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(15, 240, "Pan/Tilt Buttons: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(70, 240, `${$("#panTilts").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(110, 240, "Zoom In/Out Buttons: " );
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(165, 240, `${$("#zooms").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(15, 250, "Iris Buttons: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(70, 250, `${$("#iriss").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(110, 250, "Auto Iris: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(165, 250, `${$("#aIRISs").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(15, 260, "Focus Buttons: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(70, 260, `${$("#focuss").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(110, 260, "Auto Focus: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(165, 260, `${$("#aFocuss").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(15, 270, "Preset Position Set: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(70, 270, `${$("#presetSets").val().trim()}`);
           doc.setTextColor(100);
+          doc.setFontType("bold");
           doc.text(110, 270, "Preset Position Show:  ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(165, 270, `${$("#presetShows").val().trim()}`);
 
-
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(15, 280, "PTZ Speed Adjust: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(75, 280, `${$("#ptzSppeds").val().trim()}`);
+          doc.text(70, 280, `${$("#ptzSppeds").val().trim()}`);
 
 
 
           doc.addPage();
+          doc.setFont("times");
           doc.rect(5, 5, 200, 290);
           doc.text(170, 10, `${dateString}`);
           doc.ellipse(100, 25, 50, 13, 'S');
 
-
+          doc.setFontType("bold");
           doc.setTextColor(231, 77, 61);
           doc.text(80, 20, 'Salient Systems');
 
-
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(65, 30, 'Camera Certification Template');
-          
+         
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 50, "FW Version: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(40, 50, `${$(".fwVersion").val().trim()}`);
+          doc.text(45, 50, `${$(".fwVersion").val().trim()}`);
           doc.text(70, 50, `${$(".updated").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 60, "Dewarping: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(40, 60, `${$("#dewarpings").val().trim()}`);
+          doc.text(45, 60, `${$("#dewarpings").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(50, 70, "Dewarping Driver: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(100, 70, `${$(".dewarpingT").val().trim()}`);
           doc.text(140, 70, `${$(".dewarpingP").val().trim()}`);
 
           
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 80, "On-Camera events: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(65, 80, `${$("#events").val().trim()}`);
+          doc.text(60, 80, `${$("#events").val().trim()}`);
 
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 90, "Testing Level: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
           doc.text(50, 90, `${$("#testLs").val().trim()}`);
           
+          doc.setFontType("bold");
           doc.setTextColor(100);
           doc.text(10, 100, "Notes: ");
+          doc.setFontType("normal");
           doc.setTextColor(0, 0, 0);
-          doc.text(20, 120, `${$(".note").val().trim()}`);
+          doc.text(20, 110, `${$(".note").val().trim()}`);
 
           // Save the PDF
           doc.save(`${$(".manfu").val().trim()}` + "_" + `${$(".model").val().trim()}` + ".pdf");
