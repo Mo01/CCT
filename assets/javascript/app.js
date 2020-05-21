@@ -489,11 +489,13 @@ $(function () {
       $(".newTypeCheck").removeAttr("disabled");
       $(".newTypeCheck").focus();
       $(".deviceTypeCheck").attr("disabled", "disabled");
-      $(".deviceTypeCheck").val("")
+      $(".deviceTypeCheck").val("");
+      $(".deviceTypeValue").val("");
     } else {
       $(".newTypeCheck").attr("disabled", "disabled");
       $(".deviceTypeCheck").removeAttr("disabled");
       $(".deviceTypeCheck").focus();
+      $(".newTypeCheck").val("");
     }
   });
 
@@ -683,7 +685,8 @@ $(function () {
       doc.text(10, 100, "Device Type: ");
       doc.setFontType("normal");
       doc.setTextColor(0, 0, 0);
-      doc.text(50, 100, (` ${$(".deviceTypeCheck").val().trim()}` || ` ${$(".newTypeCheck").val().trim()}`));
+      doc.text(50, 100, ` ${$(".deviceTypeCheck").val().trim()}`);
+      doc.text(50, 100, ` ${$(".newTypeCheck").val().trim()}` );
 
       doc.setFontType("bold");
       doc.setTextColor(100);
