@@ -454,6 +454,12 @@ $(function () {
       $(".mac5").focus()
     }
   });
+  $('.mac5').on('input', function (event) {
+    let mac = event.currentTarget.value;
+    if (mac.length === 2) {
+      $(".mac6").focus()
+    }
+  });
 
   $('.ip1').on('input', function (event) {
     let ip = event.currentTarget.value;
@@ -592,6 +598,7 @@ $(function () {
     let mac3 = $(".mac3").val();
     let mac4 = $(".mac4").val();
     let mac5 = $(".mac5").val();
+    let mac6 = $(".mac6").val();
     let chCount = $(".chCount ").val();
     let streamId = $(".streamId ").val();
     let uName = $(".uName ").val();
@@ -606,7 +613,7 @@ $(function () {
     let dateString = ("0" + (m.getUTCMonth() + 1)).slice(-2) + "/" + ("0" + m.getUTCDate()).slice(-2) + "/" + m.getUTCFullYear();
 
 
-    if (testerName !== "" && cvVersion !== "" && placeholder !== "" && manfu !== "" && model !== "" && ip1 !== "" && ip2 !== "" && ip3 !== "" && ip4 !== "" && mac1 !== "" && mac2 !== "" && mac3 !== "" && mac4 !== "" && mac5 !== "" && chCount !== "" && streamId !== "" && uName !== "" && pWord !== "" && fwVersion !== "" && ptzs !== "" && dewarpings !== "" && events !== "" && testLs !== "") {
+    if (testerName !== "" && cvVersion !== "" && placeholder !== "" && manfu !== "" && model !== "" && ip1 !== "" && ip2 !== "" && ip3 !== "" && ip4 !== "" && mac1 !== "" && mac2 !== "" && mac3 !== "" && mac4 !== "" && mac5 !== "" && mac6 !== "" && chCount !== "" && streamId !== "" && uName !== "" && pWord !== "" && fwVersion !== "" && ptzs !== "" && dewarpings !== "" && events !== "" && testLs !== "") {
 
       var doc = new jsPDF({
         orientation: 'portrait',
@@ -678,7 +685,8 @@ $(function () {
       doc.text(148, 90, `${$(".mac2").val().trim()}` + ":");
       doc.text(156, 90, `${$(".mac3").val().trim()}` + ":");
       doc.text(164, 90, `${$(".mac4").val().trim()}` + ":");
-      doc.text(172, 90, `${$(".mac5").val().trim()}`);
+      doc.text(172, 90, `${$(".mac5").val().trim()}` + ":");
+      doc.text(180, 90, `${$(".mac6").val().trim()}`);
 
       doc.setFontType("bold");
       doc.setTextColor(100);
